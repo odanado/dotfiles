@@ -9,6 +9,11 @@ if [ -a "$HOME/bin/vim/bin/vim" ]; then
     alias vim="$HOME/bin/vim/bin/vim"
 fi
 
+if [ -a "$HOME/local/gcc" ]; then
+    export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/local/gcc/lib:$HOME/local/gcc/lib64"
+    export PATH="$PATH:$HOME/local/gcc/bin"
+fi
+
 
 if [ `uname` = "CYGWIN_NT-6.1" ] ; then
 	#win
