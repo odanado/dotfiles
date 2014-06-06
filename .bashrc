@@ -16,10 +16,11 @@ fi
 
 
 if [ `uname` = "CYGWIN_NT-6.1" ] ; then
-	#win
-    
+    #win
+
     alias sublimetext="/cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe"
-	export PATH=$PATH":/usr/local/graphviz/bin"
+    export PATH=$PATH":/usr/local/graphviz/bin"
 
 
 fi
+
