@@ -14,6 +14,9 @@ if [ -d "$HOME/local/gcc" ]; then
     export PATH="$PATH:$HOME/local/gcc/bin"
 fi
 
+if [ -d "$HOME/local/clang" ]; then
+    export PATH="$PATH:$HOME/local/clang/bin"
+fi
 
 if [ `uname` = "CYGWIN_NT-6.1" ] ; then
     #win
