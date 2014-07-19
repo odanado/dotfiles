@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/cygdrive/c/odan/Dropbox'
 let g:netrw_dirhist_2='/cygdrive/c/Users/odan/Dropbox/進学'
 let g:netrw_dirhist_3='/home/odan/Dropbox/source/ruby/odanbot'
 let g:netrw_dirhist_4='/home/odan/Pokemon-Showdown-Client/js'
 let g:netrw_dirhist_5='/cygdrive/c/odan/atom/build'
 let g:netrw_dirhist_6='/cygdrive/c/odan/git'
+let g:netrw_dirhist_7='/home/odanado/build/tmp_clang/llvm/tools/clang/lib/Frontend'

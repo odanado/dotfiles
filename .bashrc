@@ -11,14 +11,14 @@ fi
 
 if [ -d "$HOME/local/gcc" ]; then
     export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/local/gcc/lib:$HOME/local/gcc/lib64"
-    export PATH="$PATH:$HOME/local/gcc/bin"
+    export PATH="$HOME/local/gcc/bin:$PATH"
+    export LIBRARY_PATH="$LIBRARY_PATH:$HOME/local/gcc/lib64/"
+    export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:$HOME/local/gcc/include/c++/4.8.3/:$HOME/local/gcc/include/c++/4.8.3/x86_64-unknown-linux-gnu/"
 fi
 
 if [ -d "$HOME/local/clang" ]; then
-    export PATH="$PATH:$HOME/local/clang/bin"
-
+    export PATH="$HOME/local/clang/bin:$PATH"
 fi
-
 
 if [ `uname` = "CYGWIN_NT-6.1" ] ; then
     #win
