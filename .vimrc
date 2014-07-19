@@ -103,8 +103,7 @@ endif
 
 "script
 
-
-
+command Procon source ~/.vim/procon/procon.vim
 
 
 
