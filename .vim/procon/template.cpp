@@ -2,7 +2,6 @@
 #include <functional>
 #include <cmath>
 #include <cstdio>
-#include <cstdint>
 #include <cstdlib>
 #include <cstring>
 #include <string>
@@ -30,6 +29,7 @@ int dx[4]={1,0,-1,0};
 int dy[4]={0,1,0,-1};
 using namespace std;
 typedef pair<int ,int > P;
+typedef long long ll;
 
 int main() {
     return 0;
