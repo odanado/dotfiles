@@ -25,7 +25,7 @@ let g:lightline = {
 NeoBundle 'Rip-Rip/clang_complete'
 let g:clang_complete_auto=1
 let g:clang_use_library   = 1 
-let g:clang_library_path  = $HOME . "/local/clang/lib"
+let g:clang_library_path  = "/usr/local/lib"
 set completeopt=menuone
 
 " markdown
