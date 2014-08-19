@@ -28,6 +28,10 @@ let g:clang_use_library   = 1
 let g:clang_library_path  = "/usr/local/lib"
 set completeopt=menuone
 
+" neocomplete
+NeoBundle 'Shougo/neocomplete.vim'
+let g:neocomplete#enable_at_startup = 1
+
 " markdown
 
 "---------------------------------------------------------------------
