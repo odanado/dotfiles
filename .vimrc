@@ -31,6 +31,12 @@ set completeopt=menuone
 " neocomplete
 NeoBundle 'Shougo/neocomplete.vim'
 let g:neocomplete#enable_at_startup = 1
+" Ruby 用の設定
+" http://www.xmisao.com/2014/04/10/neocomplete-ruby-setting-memo.html
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
 " markdown
 
