@@ -17,4 +17,4 @@ if [ `uname` = "CYGWIN_NT-6.1" ] ; then
 
 
 fi
-
+HISTSIZE=50000
