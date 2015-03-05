@@ -8,7 +8,10 @@ if has('vim_starting')
   filetype indent off
   execute 'set runtimepath+=' . expand('~/.vim/bundle/neobundle.vim')
 endif
-call neobundle#rc(expand('~/.vim/bundle'))
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+call neobundle#end()
 
 syntax on
 filetype plugin on
