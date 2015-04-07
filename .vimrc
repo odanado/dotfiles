@@ -30,6 +30,9 @@ let g:clang_complete_auto=1
 let g:clang_use_library   = 1 
 let g:clang_library_path  = "/usr/local/lib"
 set completeopt=menuone
+if has('mac')
+    let g:clang_library_path = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib"
+endif
 
 " neocomplete
 NeoBundle 'Shougo/neocomplete.vim'
