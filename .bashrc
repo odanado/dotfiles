@@ -14,7 +14,12 @@ if [ `uname` = "CYGWIN_NT-6.1" ] ; then
 
     alias sublimetext="/cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe"
     export PATH=$PATH":/usr/local/graphviz/bin"
+elif [ `uname` = "Darwin" ]; then
+    export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+    alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+    alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
+    alias ls='ls -G'
 
 fi
 HISTSIZE=50000
