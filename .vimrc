@@ -112,6 +112,9 @@ set noignorecase
 "タブをスペースに
 set expandtab 
 
+" .un ファイル抑制
+set noundofile
+
 let OSTYPE = system('uname')
 
 if OSTYPE == "CYGWIN_NT-6.1\n"
