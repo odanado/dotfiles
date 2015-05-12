@@ -44,6 +44,21 @@ if !exists('g:neocomplete#force_omni_input_patterns')
 endif
 let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
+NeoBundleLazy 'jeaye/color_coded', {
+      \ 'build': {
+      \   'unix': 'cmake . && make && make install',
+      \ },
+      \ 'autoload' : { 'filetypes' : ['c', 'cpp', 'objc', 'objcpp'] },
+      \ 'build_commands' : ['cmake', 'make']
+  \}
+
+" solarized
+NeoBundle 'altercation/vim-colors-solarized'
+let g:solarized_termtrans=1
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'ujihisa/unite-colorscheme'
+
 " markdown
 
 "---------------------------------------------------------------------
@@ -76,7 +91,7 @@ set t_Co=256
 "vimが透ける
 highlight Normal ctermbg=none
 
-colorscheme molokai
+colorscheme solarized
 "上書き時にバックアップしない
 set nowritebackup
 
