@@ -1,1 +1,3 @@
-.vim/.netrwhist
+.vim/*
+!.vim/colors/
+!.vim/procon/
