@@ -11,7 +11,6 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
 
 syntax on
 filetype plugin on
@@ -61,6 +60,7 @@ NeoBundle 'ujihisa/unite-colorscheme'
 
 " markdown
 
+call neobundle#end()
 "---------------------------------------------------------------------
 
 filetype plugin indent on
