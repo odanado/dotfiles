@@ -21,5 +21,10 @@ elif [ `uname` = "Darwin" ]; then
 
     alias ls='ls -G'
 
+elif [ `uname` = "Linux" ]; then
+    if [ -x /usr/bin/dircolors ]; then
+        test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    fi
 fi
 HISTSIZE=50000
+
