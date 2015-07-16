@@ -4,6 +4,7 @@
 alias ls='ls --color=auto'
 export PS1="\[\e[1;32m\]\u:\[\e[00m\]\[\e[1;34m\]\w\$\[\e[00m\] "
 export PATH=$PATH":."
+export EDITOR=vim
 
 export LD_LIBRARY_PATH="/usr/local/lib:/usr/local/lib64:"$LD_LIBRARY_PATH
 export LIBRARY_PATH="/usr/local/lib:/usr/local/lib64:"$LIBRARY_PATH
