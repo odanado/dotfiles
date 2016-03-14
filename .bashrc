@@ -28,3 +28,6 @@ elif [ `uname` = "Linux" ]; then
 fi
 HISTSIZE=50000
 
+
+# added by travis gem
+[ -f /Users/user/.travis/travis.sh ] && source /Users/user/.travis/travis.sh
