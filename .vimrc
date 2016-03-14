@@ -12,75 +12,28 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-syntax on
-filetype plugin on
-filetype indent on
-
-" SSH クライアントの設定によってはマウスが使える（putty だと最初からいける）
-set mouse=n
-NeoBundle 'itchyny/lightline.vim'
-let g:lightline = {
-			\ 'colorscheme': 'wombat'
-			\ }
-
-" clang_complate
-NeoBundle 'Rip-Rip/clang_complete'
-let g:clang_complete_auto=1
-let g:clang_use_library   = 1 
-let g:clang_library_path  = "/usr/local/lib"
-set completeopt=menuone
-if has('mac')
-    let g:clang_library_path = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib"
-endif
-
-" neocomplete
-NeoBundle 'Shougo/neocomplete.vim'
-let g:neocomplete#enable_at_startup = 1
-" Ruby 用の設定
-" http://www.xmisao.com/2014/04/10/neocomplete-ruby-setting-memo.html
-if !exists('g:neocomplete#force_omni_input_patterns')
-    let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-
-NeoBundleLazy 'jeaye/color_coded', {
-      \ 'build': {
-      \   'unix': 'cmake . && make && make install',
-      \ },
-      \ 'autoload' : { 'filetypes' : ['c', 'cpp', 'objc', 'objcpp'] },
-      \ 'build_commands' : ['cmake', 'make']
-  \}
-
-" solarized
-NeoBundle 'altercation/vim-colors-solarized'
-let g:solarized_termtrans=1
-
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
-
-" markdown
-
-call neobundle#end()
-"---------------------------------------------------------------------
-
 filetype plugin indent on
 syntax on
-set nocompatible
+
 "インデント(タブ)を空白2つ分にする
 set tabstop=4
 set shiftwidth=4
-"Cのインデントに
-"set cindent
+
 "行番号を表示
 set number
+
 "検索結果をハイライト
 set hlsearch
+
 "入力しながら検索
 set incsearch
+
 "入力中のコマンドが見えるように
 set showcmd
+
 "右下に行番号表示
 set ruler
+
 "選択行を見やすく
 set cursorline
 highlight cursorline term=reverse cterm=reverse
@@ -88,10 +41,6 @@ highlight cursorline term=reverse cterm=reverse
 "端末にカラーを左右されない
 set t_Co=256
 
-"vimが透ける
-highlight Normal ctermbg=none
-
-colorscheme solarized
 "上書き時にバックアップしない
 set nowritebackup
 
@@ -104,7 +53,7 @@ set noswapfile
 " バックスペースでインデントや改行を削除できるようにする
 set backspace=indent,eol,start
 
-"コマンドを100件まで記録(?)
+"コマンドを100件まで記録
 set history=100
 
 "ステータス行を常に表示する
@@ -122,40 +71,9 @@ set noerrorbells
 "検索時に大文字小文字同一視
 set noignorecase
 
-"ビープ音を鳴らさない
-
 "タブをスペースに
 set expandtab 
 
 " .un ファイル抑制
 set noundofile
-
-let OSTYPE = system('uname')
-
-if OSTYPE == "CYGWIN_NT-6.1\n"
-	""win
-elseif OSTYPE == "Linux\n"
-	""Linux
-
-	vmap <C-c> :w !xsel -ib<CR><CR>
-endif
-
-
-"script
-
-command Procon source ~/.vim/procon/procon.vim
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
