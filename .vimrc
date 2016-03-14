@@ -12,6 +12,14 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'itchyny/lightline.vim'
+let g:lightline = {
+            \ 'colorscheme': 'wombat'
+            \ }
+
+call neobundle#end()
+
+set mouse=n
 filetype plugin indent on
 syntax on
 
