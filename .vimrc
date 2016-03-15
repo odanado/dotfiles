@@ -16,12 +16,18 @@ NeoBundle 'itchyny/lightline.vim'
 let g:lightline = {
             \ 'colorscheme': 'wombat'
             \ }
+" solarized
+NeoBundle 'altercation/vim-colors-solarized'
+let g:solarized_termtrans=1
 
 call neobundle#end()
 
 set mouse=n
 filetype plugin indent on
 syntax on
+
+" colorscheme変更
+colorscheme solarized
 
 "インデント(タブ)を空白2つ分にする
 set tabstop=4
