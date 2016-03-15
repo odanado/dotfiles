@@ -72,6 +72,9 @@ NeoBundleLazy 'jeaye/color_coded', {
             \ 'build_commands' : ['cmake', 'make']
             \}
 
+" unite.vim
+NeoBundle 'Shougo/unite.vim'
+
 call neobundle#end()
 
 set mouse=n
