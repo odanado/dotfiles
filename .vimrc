@@ -60,6 +60,15 @@ let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
 " vim-template
 NeoBundle 'thinca/vim-template'
 
+" color_coded
+NeoBundleLazy 'jeaye/color_coded', {
+            \ 'build': {
+            \   'unix': 'cmake . && make && make install',
+            \ },
+            \ 'autoload': { 'filetypes' : ['c', 'cpp', 'objc', 'objcpp'] },
+            \ 'build_commands' : ['cmake', 'make']
+            \}
+
 call neobundle#end()
 
 set mouse=n
