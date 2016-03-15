@@ -20,6 +20,9 @@ let g:lightline = {
 NeoBundle 'altercation/vim-colors-solarized'
 let g:solarized_termtrans=1
 
+NeoBundle 'tomasr/molokai'
+let g:molokai_original = 1
+
 " neocomplete
 NeoBundle 'Shougo/neocomplete.vim'
 
