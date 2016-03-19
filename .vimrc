@@ -59,6 +59,8 @@ NeoBundle 'odanado/vim-clang'
 let g:clang_auto = 0
 let g:clang_enable_format_command = 0
 let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
+let g:clang_c_completeopt   = 'menuone'
+let g:clang_cpp_completeopt = 'menuone'
 
 " vim-template
 NeoBundle 'thinca/vim-template'
