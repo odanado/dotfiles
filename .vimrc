@@ -99,7 +99,7 @@ NeoBundle 'kana/vim-operator-user'
 " vim-clang-format
 NeoBundle 'rhysd/vim-clang-format'
 let g:clang_format#style_options = {
-            \ "AccessModifierOffset" : "-4",
+            \ "AccessModifierOffset" : "-3",
             \ "AllowShortIfStatementsOnASingleLine" : "true",
             \ "AlwaysBreakTemplateDeclarations" : "true",
             \ "Standard" : "C++11",
