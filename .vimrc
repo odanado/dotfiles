@@ -56,8 +56,9 @@ let g:neocomplete#force_omni_input_patterns.cpp =
             \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 
 " vim-clang
-NeoBundle 'justmao945/vim-clang'
+NeoBundle 'odanado/vim-clang'
 let g:clang_auto = 0
+let g:clang_enable_format_command = 0
 let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
 
 " vim-template
@@ -92,6 +93,23 @@ if has('conceal')
 endif
 
 let g:neosnippet#snippets_directory='~/.vim/snippets'
+
+" vim-operator-user
+NeoBundle 'kana/vim-operator-user'
+
+" vim-clang-format
+NeoBundle 'rhysd/vim-clang-format'
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : "-4",
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "Standard" : "C++11",
+            \ "IndentWidth": "4"}
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
+nmap <Leader>C :ClangFormatAutoToggle<CR>
+
 
 call neobundle#end()
 
