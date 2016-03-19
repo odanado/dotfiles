@@ -110,6 +110,17 @@ autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
+" nerdtree
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+" ファイル名を指定して起動する時はnerdtreeを起動しない
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let g:NERDTreeShowBookmarks=1
+let g:NERDTreeIgnore = ['\~$', '\.o$', '\.gch$', '\.out', '\.exe']
+map <C-n> :NERDTreeToggle<CR>
+map <C-b> :Bookmark<CR>
+
 
 call neobundle#end()
 
