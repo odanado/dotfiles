@@ -2,6 +2,7 @@
 "http://qiita.com/hrsh7th@github/items/766543bd2ef565bd1ee9
 scriptencoding utf-8
 set nocompatible
+let mapleader = "\<Space>"
 
 if has('vim_starting')
   filetype plugin off
