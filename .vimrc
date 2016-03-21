@@ -55,7 +55,7 @@ let g:neocomplete#force_omni_input_patterns.cpp =
             \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 
 " vim-clang
-NeoBundle 'odanado/vim-clang'
+NeoBundle 'justmao945/vim-clang'
 let g:clang_auto = 0
 let g:clang_enable_format_command = 0
 let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
