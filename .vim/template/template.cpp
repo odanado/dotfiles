@@ -4,6 +4,8 @@
 #include <sstream>
 #include <map>
 #include <set>
+#include <queue>
+#include <algorithm>
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
