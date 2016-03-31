@@ -133,6 +133,9 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 let g:syntastic_cpp_check_header = 1
 
+" vim-cursorword
+NeoBundle 'itchyny/vim-cursorword'
+
 call neobundle#end()
 
 set mouse=n
