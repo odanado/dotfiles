@@ -146,6 +146,10 @@ let g:jedi#smart_auto_mappings = 0
 let g:neocomplete#force_omni_input_patterns.python =
             \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
 
+
+" pythonで補完時に上にdocumentが表示されないように
+autocmd FileType python set completeopt-=preview
+
 call neobundle#end()
 
 set mouse=n
