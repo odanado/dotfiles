@@ -150,6 +150,37 @@ let g:neocomplete#force_omni_input_patterns.python =
 " pythonで補完時に上にdocumentが表示されないように
 autocmd FileType python set completeopt-=preview
 
+" vim-snowdrop
+NeoBundle "osyo-manga/vim-snowdrop"
+
+" set libclang directory path
+if has('mac')
+    let g:snowdrop#libclang_directory = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"
+elseif has('unix')
+    let g:snowdrop#libclang_directory = "/usr/local/lib"
+end
+
+" set clang command options.
+let g:snowdrop#command_options = {
+            \   "cpp" : "-std=c++11",
+            \}
+
+" set include directory path.
+let g:snowdrop#include_paths = {
+            \   "cpp" : [
+            \   ]
+            \}
+
+func! s:copy_cmd_output(cmd)
+    redir @*>
+    silent execute a:cmd
+    redir END
+endfunc
+
+" C-tで型を表示
+autocmd FileType cpp nmap <Leader>t :SnowdropEchoTypeof<CR>
+autocmd FileType cpp nmap <Leader>ct :call <SID>copy_cmd_output('SnowdropEchoTypeof')<CR>
+
 call neobundle#end()
 
 set mouse=n
