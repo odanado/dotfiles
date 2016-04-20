@@ -181,6 +181,12 @@ endfunc
 autocmd FileType cpp nmap <Leader>t :SnowdropEchoTypeof<CR>
 autocmd FileType cpp nmap <Leader>ct :call <SID>copy_cmd_output('SnowdropEchoTypeof')<CR>
 
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+
+au BufRead,BufNewFile *.md set filetype=markdown
+
 call neobundle#end()
 
 set mouse=n
