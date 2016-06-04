@@ -192,6 +192,8 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 
+NeoBundle 'kmnk/vim-unite-giti'
+
 au BufRead,BufNewFile *.md set filetype=markdown
 
 call neobundle#end()
