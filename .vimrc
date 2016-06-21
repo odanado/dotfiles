@@ -58,7 +58,7 @@ let g:neocomplete#force_omni_input_patterns.cpp =
 NeoBundle 'justmao945/vim-clang'
 let g:clang_auto = 0
 let g:clang_enable_format_command = 0
-let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
+let g:clang_cpp_options = '-std=c++14 -stdlib=libc++'
 let g:clang_c_completeopt   = 'menuone'
 let g:clang_cpp_completeopt = 'menuone'
 
@@ -130,7 +130,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
+let g:syntastic_cpp_compiler_options = '-std=c++14 -stdlib=libc++'
 let g:syntastic_cpp_check_header = 1
 
 let g:syntastic_python_checkers = ['pyflakes', 'pep8']
@@ -169,7 +169,7 @@ end
 
 " set clang command options.
 let g:snowdrop#command_options = {
-            \   "cpp" : "-std=c++11",
+            \   "cpp" : "-std=c++14",
             \}
 
 " set include directory path.
