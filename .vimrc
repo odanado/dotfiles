@@ -133,7 +133,8 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++14 -stdlib=libc++'
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_cpplint_exec = "cpplint"
-let g:syntastic_cpp_checkers = ['cpplint']
+let g:syntastic_cpp_checkers = ['cpplint', 'gcc']
+let g:syntastic_cpp_cpplint_args = "--filter=-build/c++11"
 
 let g:syntastic_python_checkers = ['pyflakes', 'pep8']
 
