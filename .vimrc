@@ -118,7 +118,7 @@ NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let g:NERDTreeShowBookmarks=1
-let g:NERDTreeIgnore = ['\~$', '\.o$', '\.gch$', '\.out', '\.exe']
+let g:NERDTreeIgnore = ['\~$', '\.o$', '\.gch$', '\.out', '\.exe', '\.pyc$']
 map <C-n> :NERDTreeToggle<CR>
 map <C-b> :Bookmark<CR>
 
