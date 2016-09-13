@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ln -s $PWD/bashrc $HOME/.bash_aliases
-ln -s $PWD/vimrc $HOME/.vimrc
-ln -s $PWD/vim $HOME/.vim
-ln -s $PWD/bash_powerline.sh  $HOME/.bash_powerline.sh
+ln -sf $PWD/bashrc $HOME/.bash_aliases
+ln -sf $PWD/vimrc $HOME/.vimrc
+ln -sf $PWD/vim $HOME/.vim
+ln -sf $PWD/bash_powerline.sh  $HOME/.bash_powerline.sh
