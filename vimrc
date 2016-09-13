@@ -1,6 +1,7 @@
 "---------------------------------------------------------------------
 "http://qiita.com/hrsh7th@github/items/766543bd2ef565bd1ee9
 scriptencoding utf-8
+set encoding=utf-8
 set nocompatible
 let mapleader = "\<Space>"
 
