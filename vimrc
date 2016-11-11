@@ -199,6 +199,9 @@ NeoBundle 'tyru/open-browser.vim'
 
 NeoBundle 'kmnk/vim-unite-giti'
 
+" clever-f.vim
+NeoBundle 'rhysd/clever-f.vim'
+
 au BufRead,BufNewFile *.md set filetype=markdown
 
 call neobundle#end()
