@@ -211,11 +211,7 @@ filetype plugin indent on
 syntax on
 
 " colorscheme変更
-if has("mac")
-    colorscheme solarized
-else
-    colorscheme molokai
-endif
+colorscheme molokai
 
 "インデント(タブ)を空白2つ分にする
 set tabstop=4
