@@ -1,0 +1,32 @@
+[[plugins]]
+repo = 'rhysd/vim-clang-format'
+hook_add = '''
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : "-3",
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "Standard" : "C++11",
+            \ "IndentWidth": "4"}
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
+nmap <Leader>C :ClangFormatAutoToggle<CR>
+'''
+on_ft = ['c', 'cpp']
+
+[[plugins]]
+repo = 'zchee/deoplete-clang'
+depends = 'Shougo/deoplete.nvim'
+hook_add = '''
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/include/clang/'
+'''
+on_ft = ['c', 'cpp']
+
+[[plugins]]
+repo = 'arakashic/chromatica.nvim'
+hook_add = '''
+let g:chromatica#libclang_path='/usr/lib/llvm-3.8/lib'
+let g:chromatica#enable_at_startup=1
+'''
+on_ft = ['c', 'cpp']

@@ -27,6 +27,7 @@ if dein#load_state(s:dein_cache_dir)
 
     call dein#load_toml(s:toml_dir . '/common.toml', {'lazy': 0})
     call dein#load_toml(s:toml_dir . '/python.toml', {'lazy': 0})
+    call dein#load_toml(s:toml_dir . '/cpp.toml', {'lazy': 0})
 
     call dein#end()
     call dein#save_state()
