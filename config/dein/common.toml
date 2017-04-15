@@ -32,6 +32,12 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
+repo = 'mattn/sonictemplate-vim'
+hook_add = '''
+let g:sonictemplate_vim_template_dir = ['~/.config/nvim/templates']
+'''
+
+[[plugins]]
 repo = 'Shougo/unite.vim'
 
 [[plugins]]
