@@ -15,7 +15,10 @@ repo = 'Shougo/deoplete.nvim'
 hook_add = '''
 let g:deoplete#enable_at_startup=1
 let g:deoplete#enable_smart_case = 1
-let g:deoplete#omni#input_patterns = {}
+let g:deoplete#omni_input_patterns = {}
+
+let g:deoplete#omni_input_patterns.python = 
+            \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
 '''
 
 [[plugins]]
