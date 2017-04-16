@@ -8,15 +8,15 @@ let g:config_home = expand('$HOME/.config')
 
 let s:dein_cache_dir = g:cache_home . '/dein'
 
-if glob('/usr/bin/python')
+if !empty(glob('/usr/bin/python'))
     let g:python_host_prog = '/usr/bin/python'
-elseif glob('/usr/local/bin/python')
+elseif !empty(glob('/usr/local/bin/python'))
     let g:python_host_prog = '/usr/local/bin/python'
 endif
 
-if glob('/usr/bin/python3')
+if !empty(glob('/usr/bin/python3'))
     let g:python3_host_prog = '/usr/bin/python3'
-elseif glob('/usr/local/bin/python3')
+elseif !empty(glob('/usr/local/bin/python3'))
     let g:python3_host_prog = '/usr/local/bin/python3'
 endif
     
