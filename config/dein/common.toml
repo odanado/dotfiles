@@ -28,15 +28,24 @@ let g:deoplete#omni_input_patterns.python =
 [[plugins]]
 repo = 'Shougo/neosnippet'
 hook_add = '''
+" Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
             \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+    set conceallevel=2 concealcursor=niv
+endif
+
+let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
 '''
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
+depends = 'Shougo/neosnippet'
 
 [[plugins]]
 repo = 'mattn/sonictemplate-vim'
