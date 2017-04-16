@@ -7,6 +7,7 @@ let g:cache_home = expand('$HOME/.cache')
 let g:config_home = expand('$HOME/.config')
 
 let s:dein_cache_dir = g:cache_home . '/dein'
+let g:python3_host_prog='/usr/local/bin/python3'
 
 
 if &runtimepath !~# '/dein.vim'
