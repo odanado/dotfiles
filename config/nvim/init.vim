@@ -7,8 +7,19 @@ let g:cache_home = expand('$HOME/.cache')
 let g:config_home = expand('$HOME/.config')
 
 let s:dein_cache_dir = g:cache_home . '/dein'
-let g:python3_host_prog='/usr/local/bin/python3'
 
+if glob('/usr/bin/python')
+    let g:python_host_prog = '/usr/bin/python'
+elseif glob('/usr/local/bin/python')
+    let g:python_host_prog = '/usr/local/bin/python'
+endif
+
+if glob('/usr/bin/python3')
+    let g:python3_host_prog = '/usr/bin/python3'
+elseif glob('/usr/local/bin/python3')
+    let g:python3_host_prog = '/usr/local/bin/python3'
+endif
+    
 
 if &runtimepath !~# '/dein.vim'
     let s:dein_repo_dir = s:dein_cache_dir . '/repos/github.com/Shougo/dein.vim'
