@@ -85,3 +85,5 @@ set showmatch
 set matchtime=2
 
 set noerrorbells
+
+tnoremap <silent> <ESC> <C-\><C-n>
