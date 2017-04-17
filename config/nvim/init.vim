@@ -49,7 +49,7 @@ if has('vim_starting') && dein#check_install()
     call dein#install()
 endif
 
-set mouse=n
+set mouse=a
 filetype plugin indent on
 syntax on
 
