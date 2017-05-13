@@ -17,13 +17,18 @@ nmap <Leader>C :ClangFormatAutoToggle<CR>
 repo = 'zchee/deoplete-clang'
 depends = 'Shougo/deoplete.nvim'
 hook_add = '''
-let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so'
-let g:deoplete#sources#clang#clang_header = '/usr/include/clang/'
+if has('mac')
+    let g:deoplete#sources#clang#libclang_path = '/opt/llvm/lib/libclang.dylib'
+    let g:deoplete#sources#clang#clang_header = '/opt/llvm/lib/clang'
+else
+    let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so'
+    let g:deoplete#sources#clang#clang_header = '/usr/include/clang/'
+endif
 '''
 
 [[plugins]]
 repo = 'arakashic/chromatica.nvim'
 hook_add = '''
-let g:chromatica#libclang_path='/usr/lib/llvm-3.8/lib'
+let g:chromatica#libclang_path='/opt/llvm/lib'
 let g:chromatica#enable_at_startup=1
 '''
