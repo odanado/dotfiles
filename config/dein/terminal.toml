@@ -1,0 +1,4 @@
+[[plugins]]
+repo = 'kassio/neoterm'
+hook_add = '''
+'''

@@ -38,6 +38,7 @@ if dein#load_state(s:dein_cache_dir)
     let s:toml_dir = g:config_home . '/dein'
 
     call dein#load_toml(s:toml_dir . '/common.toml', {'lazy': 0})
+    call dein#load_toml(s:toml_dir . '/terminal.toml', {'lazy': 0})
     call dein#load_toml(s:toml_dir . '/python.toml', {'lazy': 0, 'on_ft': 'python'})
     call dein#load_toml(s:toml_dir . '/cpp.toml', {'lazy': 0, 'on_ft': ['c', 'cpp']})
 
