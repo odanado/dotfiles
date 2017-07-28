@@ -4,8 +4,9 @@
 alias ls='ls --color=auto'
 
 # export
-export PATH=$PATH":."
 export EDITOR=vim
+
+export LANG=ja_JP.UTF-8
 
 # 履歴を増やす
 HISTSIZE=50000
