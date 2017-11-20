@@ -20,10 +20,6 @@ if [ `uname` = "Darwin" ]; then
     alias g='/usr/local/Cellar/gcc/5.3.0/bin/g++-5 -std=c++11 -Wall -O2'
 fi
 
-if [ -f ~/.bash_powerline.sh ]; then
-    source ~/.bash_powerline.sh
-fi
-
 agent="$HOME/.ssh/agent"
 if [ -S "$SSH_AUTH_SOCK" ]; then
     case $SSH_AUTH_SOCK in
