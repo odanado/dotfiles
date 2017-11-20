@@ -76,15 +76,20 @@ map <C-b> :Bookmark<CR>
 '''
 
 [[plugins]]
-repo = 'scrooloose/syntastic'
+repo = 'w0rp/ale'
+rev = 'add-cpplint'
 hook_add = '''
-let g:syntastic_cpp_compiler_options = '-std=c++14'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:ale_statusline_format = ['E%d', 'W%d', '']
+let g:ale_echo_msg_format = '[%linter%] %s'
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 
-let g:syntastic_python_checkers = ['flake8']
+let g:ale_cpp_cpplint_filter = ['-legal/copyright']
+let g:ale_cpp_cpplint_verbose = 5
+let g:ale_linters = {
+\   'cpp': ['g++', 'cpplint'],
+\}
+
 '''
 
 
@@ -93,13 +98,13 @@ repo = 'itchyny/vim-cursorword'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-depends = ['scrooloose/nerdtree', 'scrooloose/syntastic']
+depends = ['scrooloose/nerdtree', 'w0rp/ale']
 hook_add = '''
 let g:lightline = {
             \ 'colorscheme': 'wombat',
             \ 'active': {
-            \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
-            \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+            \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'], ['ale'] ],
+            \   'right': [ ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
             \ },
             \ 'component_function': {
             \   'fugitive': 'LightLineFugitive',
@@ -109,12 +114,7 @@ let g:lightline = {
             \   'fileencoding': 'LightLineFileencoding',
             \   'mode': 'LightLineMode',
             \   'ctrlpmark': 'CtrlPMark',
-            \ },
-            \ 'component_expand': {
-            \   'syntastic': 'SyntasticStatuslineFlag',
-            \ },
-            \ 'component_type': {
-            \   'syntastic': 'error',
+            \   'ale': 'ALEStatus',
             \ },
             \ 'subseparator': { 'left': '|', 'right': '|' }
             \ }
@@ -211,14 +211,10 @@ function! TagbarStatusFunc(current, sort, fname, ...) abort
     return lightline#statusline(0)
 endfunction
 
-augroup AutoSyntastic
-    autocmd!
-    autocmd BufWritePost *.c,*.cpp call s:syntastic()
-augroup END
-function! s:syntastic()
-    SyntasticCheck
-    call lightline#update()
+function! ALEStatus()
+  return ALEGetStatusLine()
 endfunction
+
 
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
