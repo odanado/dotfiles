@@ -11,3 +11,6 @@ script:
     - docker exec -it zsh zsh -c "./install.sh"
     - docker exec -it zsh zsh -c "./deploy.sh"
     - docker exec -it zsh zsh -c "source ~/.zshenv && source ~/.zshrc"
+
+notifications:
+    email: false
