@@ -69,7 +69,7 @@ set showcmd
 set ruler
 
 set cursorline
-highlight cursorline term=reverse cterm=reverse
+highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 
 set t_Co=256
 
