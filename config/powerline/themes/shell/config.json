@@ -13,10 +13,6 @@
 				"priority": 30
 			},
 			{
-				"function": "powerline.segments.common.env.virtualenv",
-				"priority": 50
-			},
-			{
 				"function": "powerline.segments.shell.cwd",
 				"priority": 10,
                 "args": {
@@ -32,6 +28,10 @@
 			{
 				"function": "powerline.segments.shell.last_pipe_status",
 				"priority": 10
+			},
+			{
+				"function": "powerline.segments.common.env.virtualenv",
+				"priority": 50
 			},
 			{
 				"function": "powerline.segments.common.vcs.stash",

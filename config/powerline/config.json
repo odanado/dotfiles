@@ -19,7 +19,7 @@
 		},
 		"shell": {
 			"colorscheme": "default",
-			"theme": "default",
+			"theme": "config",
 			"local_themes": {
 				"continuation": "continuation",
 				"select": "select"

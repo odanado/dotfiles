@@ -7,7 +7,7 @@ ln -snfv $PWD/config/dein $HOME/.config/
 ln -snfv $PWD/config/nvim $HOME/.config/
 
 ln -snfv $PWD/config/powerline/config.json $HOME/.config/powerline/
-ln -snfv $PWD/config/powerline/themes $HOME/.config/powerline/
+ln -snfv $PWD/config/powerline/themes $HOME/.config/powerline
 
 ln -snfv $PWD/gitconfig $HOME/.gitconfig
 
