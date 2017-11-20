@@ -13,4 +13,5 @@ ln -snfv $PWD/vimrc $HOME/.vimrc
 
 ln -snfv $PWD/zsh/zshrc $HOME/.zshrc
 ln -snfv $PWD/zsh/zshrc.darwin $HOME/.zshrc.darwin
+ln -snfv $PWD/zsh/zshrc.linux $HOME/.zshrc.linux
 ln -snfv $PWD/zsh/zshenv $HOME/.zshenv

@@ -52,5 +52,6 @@ case ${OSTYPE} in
         source ${ZDOTDIR}/.zshrc.darwin
         ;;
     linux*)
+        source ${ZDOTDIR}/.zshrc.linux
         ;;
 esac
