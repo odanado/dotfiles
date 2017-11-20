@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+    - docker
+
+before_install:
+    - docker build -t zsh-image .
+    - docker run --name zsh -d zsh-image
+
+script:
+    - docker exec -it zsh zsh -c "./install.sh"
+    - docker exec -it zsh zsh -c "./deploy.sh"
+    - docker exec -it zsh zsh
