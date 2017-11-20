@@ -4,6 +4,9 @@ mkdir -p $HOME/.config
 
 ln -snfv $PWD/config/dein $HOME/.config/
 ln -snfv $PWD/config/nvim $HOME/.config/
+
+ln -snfv $PWD/gitconfig $HOME/.gitconfig
+
 ln -snfv $PWD/tmux.conf $HOME/.tmux.conf
 
 ln -snfv $PWD/vimrc $HOME/.vimrc
