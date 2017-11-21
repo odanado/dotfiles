@@ -47,6 +47,18 @@ export SAVEHIST=500000
 setopt hist_ignore_all_dups # 同じコマンドをヒストリに保存しない
 setopt hist_reduce_blanks # 無駄なスペースを消してヒストリに保存する
 
+
+# tmuxでもssh-agentが継続されるように
+agent="$HOME/.ssh/agent"
+if [ -S "$SSH_AUTH_SOCK" ]; then
+    case $SSH_AUTH_SOCK in
+    /tmp/*/agent.[0-9]*)
+        ln -snf "$SSH_AUTH_SOCK" $agent && export SSH_AUTH_SOCK=$agent
+    esac
+elif [ -S $agent ]; then
+    export SSH_AUTH_SOCK=$agent
+fi
+
 case ${OSTYPE} in
     darwin*)
         source ${ZDOTDIR}/.zshrc.darwin
