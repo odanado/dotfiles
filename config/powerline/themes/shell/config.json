@@ -16,7 +16,8 @@
 				"function": "powerline.segments.shell.cwd",
 				"priority": 10,
                 "args": {
-                    "dir_limit_depth": 1
+                    "dir_limit_depth": 1,
+                    "ellipsis": null
                 }
 			},
 			{
