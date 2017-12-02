@@ -14,9 +14,9 @@ script:
 
 after_success:
     - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
-      docker push odanado/zsh
-    fi
+        docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+        docker push odanado/zsh
+      fi
 
 notifications:
     email: false
