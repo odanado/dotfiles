@@ -12,5 +12,11 @@ script:
     - docker exec -it zsh zsh -c "./deploy.sh"
     - docker exec -it zsh zsh -c "source ~/.zshenv && source ~/.zshrc"
 
+after_success:
+    - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+      docker push odanado/zsh
+    fi
+
 notifications:
     email: false
