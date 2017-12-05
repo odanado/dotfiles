@@ -4,13 +4,19 @@ services:
     - docker
 
 before_install:
-    - docker build -t zsh-image .
-    - docker run --name zsh -d zsh-image
+    - docker build -t odanado/zsh .
+    - docker run --name zsh -d odanado/zsh
 
 script:
     - docker exec -it zsh zsh -c "./install.sh"
     - docker exec -it zsh zsh -c "./deploy.sh"
     - docker exec -it zsh zsh -c "source ~/.zshenv && source ~/.zshrc"
+
+after_success:
+    - if [ "$TRAVIS_BRANCH" == "master" ]; then
+        docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+        docker push odanado/zsh;
+      fi
 
 notifications:
     email: false
