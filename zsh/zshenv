@@ -15,3 +15,7 @@ export CPATH=~/.cudnn/active/cuda/include:$CPATH
 export LIBRARY_PATH=~/.cudnn/active/cuda/lib64:$LIBRARY_PATH
 
 export PATH="$HOME/miniconda3/bin:$PATH"
+
+for i in /etc/profile.d/*.sh ; do
+    [ -r $i ] && source $i
+done
