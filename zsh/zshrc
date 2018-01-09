@@ -15,6 +15,9 @@ zplug "mollifier/anyframe"
 
 zplug "powerline/powerline", use:"powerline/bindings/zsh/powerline.zsh"
 
+zplug "simonwhitaker/gibo", as:command, use:"gibo"
+zplug "simonwhitaker/gibo", use:"gibo-completion.zsh"
+
 zplug check || zplug install
 zplug load --verbose
 
