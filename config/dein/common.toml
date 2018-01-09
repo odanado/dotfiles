@@ -92,6 +92,8 @@ let g:ale_linters = {
 
 '''
 
+[[plugins]]
+repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'itchyny/vim-cursorword'

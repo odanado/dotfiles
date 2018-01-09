@@ -19,3 +19,4 @@ export PATH="$HOME/miniconda3/bin:$PATH"
 for i in /etc/profile.d/*.sh ; do
     [ -r $i ] && source $i
 done
+export GOPATH=$HOME/.local
