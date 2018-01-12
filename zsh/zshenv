@@ -16,7 +16,8 @@ export LIBRARY_PATH=~/.cudnn/active/cuda/lib64:$LIBRARY_PATH
 
 export PATH="$HOME/miniconda3/bin:$PATH"
 
-for i in /etc/profile.d/*.sh ; do
-    [ -r $i ] && source $i
-done
+if [ -e /etc/profile ]; then
+    source /etc/profile
+fi
+
 export GOPATH=$HOME/.local
