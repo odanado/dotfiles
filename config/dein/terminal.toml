@@ -1,4 +1,5 @@
 [[plugins]]
 repo = 'kassio/neoterm'
 hook_add = '''
+let g:neoterm_default_mod = 'botright'
 '''
