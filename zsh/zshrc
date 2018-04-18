@@ -18,6 +18,9 @@ zplug "powerline/powerline", use:"powerline/bindings/zsh/powerline.zsh"
 zplug "simonwhitaker/gibo", as:command, use:"gibo"
 zplug "simonwhitaker/gibo", use:"gibo-completion.zsh"
 
+zplug "miyagawa/cpanminus", as:command, use:"cpanm"
+zplug "skaji/cpm", as:command, use:"cpm"
+
 zplug check || zplug install
 zplug load --verbose
 
