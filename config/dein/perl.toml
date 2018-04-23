@@ -1,0 +1,8 @@
+[[plugins]]
+repo = 'vim-perl/vim-perl'
+
+[[plugins]]
+repo = 'moznion/vim-cpanfile'
+
+[[plugins]]
+repo = 'y-uuki/perl-local-lib-path.vim'
