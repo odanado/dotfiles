@@ -18,8 +18,8 @@ zplug "powerline/powerline", use:"powerline/bindings/zsh/powerline.zsh"
 zplug "simonwhitaker/gibo", as:command, use:"gibo"
 zplug "simonwhitaker/gibo", use:"gibo-completion.zsh"
 
-zplug "miyagawa/cpanminus", as:command, use:"cpanm"
-zplug "skaji/cpm", as:command, use:"cpm"
+# zplug "miyagawa/cpanminus", as:command, use:"cpanm"
+# zplug "skaji/cpm", as:command, use:"cpm"
 
 zplug check || zplug install
 zplug load --verbose
@@ -45,6 +45,8 @@ bindkey '' anyframe-widget-checkout-git-branch
 alias cdg=anyframe-widget-cd-ghq-repository
 alias cdra=anyframe-widget-cdr
 
+# plenv
+eval "$(plenv init - zsh)"
 
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
