@@ -21,8 +21,3 @@ if [ -e /etc/profile ]; then
 fi
 
 export GOPATH=$HOME/.local
-
-# perl
-export PATH="$HOME/.plenv/bin:$PATH"
-export PERL5_LOCAL_LIB_HOME="$HOME/.local"
-[ $SHLVL -eq 1 ] && eval "$(perl -I$PERL5_LOCAL_LIB_HOME/lib/perl5 -Mlocal::lib=$PERL5_LOCAL_LIB_HOME)"
