@@ -102,6 +102,8 @@ let g:ale_fixers = {
 \   'perl': ['perltidy']
 \}
 
+let g:ale_fix_on_save = 1
+
 '''
 
 [[plugins]]
