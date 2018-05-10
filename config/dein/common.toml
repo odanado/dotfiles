@@ -238,3 +238,6 @@ let g:vimshell_force_overwrite_statusline = 0
 '''
 [[plugins]]
 repo = 'chr4/nginx.vim'
+
+[[plugins]]
+repo = 'thinca/vim-localrc'
