@@ -13,7 +13,7 @@ colorscheme molokai
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
-let g:deoplete#enable_at_startup=1
+let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#omni_input_patterns = {}
 
@@ -23,6 +23,9 @@ let g:deoplete#omni_input_patterns.cpp =
             \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 let g:deoplete#omni_input_patterns.python = 
             \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
+" For perlomni.vim setting.
+" https://github.com/c9s/perlomni.vim
+let g:deoplete#omni_input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 '''
 
 [[plugins]]
@@ -87,12 +90,16 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 let g:ale_cpp_cpplint_filter = ['-legal/copyright']
 let g:ale_cpp_cpplint_verbose = 5
 
-let g:ale_perl_perl_executable = 'plenv exec perl'
-let g:ale_perl_perl_options = '-c -Mwarnings -Ilib'
+let g:ale_perl_perl_executable = 'perl'
+let g:ale_perl_perl_options = '-c -Mwarnings -Ilib -Ilocal/lib/perl5'
 
 let g:ale_linters = {
 \   'cpp': ['g++', 'cpplint'],
 \   'perl': ['perl'],
+\}
+
+let g:ale_fixers = {
+\   'perl': ['perltidy']
 \}
 
 '''
