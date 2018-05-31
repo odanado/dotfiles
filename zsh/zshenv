@@ -10,10 +10,6 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 
-export LD_LIBRARY_PATH=~/.cudnn/active/cuda/lib64:$LD_LIBRARY_PATH
-export CPATH=~/.cudnn/active/cuda/include:$CPATH
-export LIBRARY_PATH=~/.cudnn/active/cuda/lib64:$LIBRARY_PATH
-
 export PATH="$HOME/miniconda3/bin:$PATH"
 
 if [ -e /etc/profile ]; then
