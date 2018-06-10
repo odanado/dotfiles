@@ -21,3 +21,4 @@ if [ -e /etc/profile ]; then
 fi
 
 export GOPATH=$HOME/.local
+export PATH="$HOME/google-cloud-sdk/bin:$PATH"
