@@ -79,3 +79,5 @@ case ${OSTYPE} in
         source ${ZDOTDIR}/.zshrc.linux
         ;;
 esac
+
+[[ -s "/Users/kita/.gvm/scripts/gvm" ]] && source "/Users/kita/.gvm/scripts/gvm"
