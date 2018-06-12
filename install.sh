@@ -1,9 +1,5 @@
-#/bin/sh
+#!/usr/bin/env zsh
 
-pip install --user -r requirements.txt
-if type "pip3" > /dev/null 2>&1
-then
-    pip3 install --user -r requirements.txt
-fi
+source $HOME/.zplug/init.zsh
 
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+zplug check || zplug install
