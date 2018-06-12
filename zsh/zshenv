@@ -6,7 +6,6 @@ export LANG=ja_JP.UTF-8
 
 export EDITOR=vim
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 
@@ -17,3 +16,6 @@ if [ -e /etc/profile ]; then
 fi
 
 export GOPATH=$HOME/.local
+
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"
