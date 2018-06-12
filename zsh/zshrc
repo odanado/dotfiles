@@ -44,7 +44,6 @@ alias cdra=anyframe-widget-cdr
 
 # plenv
 eval "$(plenv init - zsh)"
-eval "$(goenv init - zsh)"
 
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
