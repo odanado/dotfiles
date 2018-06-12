@@ -17,3 +17,4 @@ fi
 
 export PATH="$HOME/.ndenv/bin:$PATH"
 eval "$(ndenv init -)"
+export PATH="$HOME/google-cloud-sdk/bin:$PATH"

@@ -18,6 +18,8 @@ zplug "powerline/powerline", use:"powerline/bindings/zsh/powerline.zsh"
 zplug "simonwhitaker/gibo", as:command, use:"gibo"
 zplug "simonwhitaker/gibo", use:"gibo-completion.zsh"
 
+# zplug 'direnv/direnv', as:command, from:gh-r, rename-to:direnv
+
 zplug check || zplug install
 zplug load --verbose
 
@@ -41,6 +43,11 @@ bindkey '' anyframe-widget-execute-history
 bindkey '' anyframe-widget-checkout-git-branch
 alias cdg=anyframe-widget-cd-ghq-repository
 alias cdra=anyframe-widget-cdr
+
+# direnv
+if type direnv >/dev/null 2>&1; then
+    eval "$(direnv hook zsh)"
+fi
 
 # plenv
 eval "$(plenv init - zsh)"
