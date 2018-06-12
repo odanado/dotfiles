@@ -8,9 +8,10 @@ before_install:
     - docker run --name zsh -d odanado/zsh
 
 script:
-    - docker exec -it zsh zsh -c "./install.sh"
-    - docker exec -it zsh zsh -c "./deploy.sh"
+    - docker exec -it zsh zsh -c "./scripts/setup.sh"
+    - docker exec -it zsh zsh -c "./scripts/deploy.sh"
     - docker exec -it zsh zsh -c "source ~/.zshenv && source ~/.zshrc"
+    - docker exec -it zsh zsh -c "./scripts/install.sh"
 
 after_success:
     - if [ "$TRAVIS_BRANCH" == "master" ]; then
