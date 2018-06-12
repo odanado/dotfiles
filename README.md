@@ -3,6 +3,8 @@
 ```bash
 git clone https://github.com/odanado/dotfiles
 cd dotfiles
-./install.sh
-./deploy.sh
+./scripts/setup.sh
+./scripts/deploy.sh
+exec $SHELL -l
+./scripts/install.sh
 ```
