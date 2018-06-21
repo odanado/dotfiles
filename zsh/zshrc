@@ -80,4 +80,4 @@ case ${OSTYPE} in
         ;;
 esac
 
-[[ -s "/Users/kita/.gvm/scripts/gvm" ]] && source "/Users/kita/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
