@@ -42,6 +42,7 @@ if dein#load_state(s:dein_cache_dir)
     call dein#load_toml(s:toml_dir . '/python.toml', {'lazy': 0, 'on_ft': 'python'})
     call dein#load_toml(s:toml_dir . '/cpp.toml', {'lazy': 0, 'on_ft': ['c', 'cpp']})
     call dein#load_toml(s:toml_dir . '/perl.toml', {'lazy': 1, 'on_ft': 'perl'})
+    call dein#load_toml(s:toml_dir . '/go.toml', {'lazy': 1, 'on_ft': 'go'})
 
     call dein#end()
     call dein#save_state()
