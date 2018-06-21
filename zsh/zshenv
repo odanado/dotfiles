@@ -15,7 +15,7 @@ if [ -e /etc/profile ]; then
     source /etc/profile
 fi
 
-if type ndenv > /dev/null 2>&1; then
+if [ -s "$HOME/.ndenv" ]; then
     export PATH="$HOME/.ndenv/bin:$PATH"
     eval "$(ndenv init -)"
 fi
