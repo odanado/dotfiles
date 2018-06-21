@@ -15,8 +15,4 @@ if [ -e /etc/profile ]; then
     source /etc/profile
 fi
 
-if [ -s "$HOME/.ndenv" ]; then
-    export PATH="$HOME/.ndenv/bin:$PATH"
-    eval "$(ndenv init -)"
-fi
 export PATH="$HOME/google-cloud-sdk/bin:$PATH"
