@@ -52,6 +52,8 @@ fi
 # plenv
 eval "$(plenv init - zsh)"
 
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
 
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
@@ -80,6 +82,4 @@ case ${OSTYPE} in
         source ${ZDOTDIR}/.zshrc.linux
         ;;
 esac
-
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
