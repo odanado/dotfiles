@@ -52,11 +52,6 @@ fi
 # plenv
 eval "$(plenv init - zsh)"
 
-# ndenv
-if [ -s "$HOME/.ndenv" ]; then
-    export PATH="$HOME/.ndenv/bin:$PATH"
-    eval "$(ndenv init - zsh)"
-fi
 
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
@@ -87,3 +82,4 @@ case ${OSTYPE} in
 esac
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
