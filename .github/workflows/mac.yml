@@ -20,3 +20,5 @@ jobs:
     
     - name: Run setup
       run: ./setup.sh
+    - name: Rerun setup
+      run: ./setup.sh
