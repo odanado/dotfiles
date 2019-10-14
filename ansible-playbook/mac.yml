@@ -2,6 +2,7 @@
   connection: local
   roles:
     - homebrew
+    - homebrew_cask
     - anyenv
     - powerline
     - zsh
