@@ -5,3 +5,4 @@ brew_cask_apps:
   - visual-studio-code
   - iterm2
   - slack
+  - discord
