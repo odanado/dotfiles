@@ -1,0 +1,11 @@
+- name: Stat anyenv config
+  stat:
+    path: ~/.config/anyenv/anyenv-install
+  register: anyenv_config
+
+- name: Init anyenv
+  shell: yes | anyenv install --init
+  when: not anyenv_config.stat.exists
+
+- name: Import nodenv
+  import_tasks: nodenv.yml

@@ -1,0 +1,11 @@
+- name: Link .zshenv
+  file:
+    src: "{{ role_path }}/files/.zshenv"
+    dest: ~/.zshenv
+    state: link
+
+- name: Link config files
+  file:
+    src: "{{ role_path }}/files"
+    dest: "{{ config_dir }}"
+    state: link

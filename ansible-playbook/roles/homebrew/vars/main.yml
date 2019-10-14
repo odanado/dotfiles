@@ -1,0 +1,15 @@
+brew_taps:
+  - homebrew/core
+brew_cask_apps:
+  - docker
+  - google-chrome
+  - google-japanese-ime
+  - visual-studio-code
+  - iterm2
+  - slack
+brew_packages:
+  - anyenv
+  - jq
+  - wget
+  - yarn
+  - zsh
