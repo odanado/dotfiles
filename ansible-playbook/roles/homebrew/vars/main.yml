@@ -6,6 +6,7 @@ brew_packages:
   - gibo
   - jq
   - peco
+  - rust
   - wget
   - yarn
   - zsh
