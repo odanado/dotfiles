@@ -9,7 +9,11 @@ brew_cask_apps:
   - slack
 brew_packages:
   - anyenv
+  - ghq
+  - gibo
   - jq
+  - peco
   - wget
   - yarn
   - zsh
+  - zplug

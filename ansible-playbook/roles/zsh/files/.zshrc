@@ -1,9 +1,27 @@
 test -t 0 || exit
 
+source /usr/local/opt/zplug/init.zsh
+
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-history-substring-search"
+
+zplug "mollifier/anyframe"
+
+zplug "powerline/powerline", use:"powerline/bindings/zsh/powerline.zsh"
+
+zplug "simonwhitaker/gibo", use:"gibo-completion.zsh"
+
+zplug load --verbose
+
 bindkey -e
 
-POWERLINE_ROOT=$(dirname $(python3 -c "import powerline; print(powerline.__file__)"))
-. $POWERLINE_ROOT/bindings/zsh/powerline.zsh
+# ctrl-b/f で単語単位の前進/後進
+bindkey '' backward-word
+bindkey '' forward-word
+
+bindkey '' autosuggest-accept
 
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
@@ -11,6 +29,10 @@ export SAVEHIST=500000
 setopt hist_ignore_all_dups # 同じコマンドをヒストリに保存しない
 setopt hist_reduce_blanks # 無駄なスペースを消してヒストリに保存する
 setopt share_history # ヒストリを共有
+
+
+source $ZDOTDIR/.zshrc.anyframe
+
 
 # anyenv
 eval "$(anyenv init - zsh)"

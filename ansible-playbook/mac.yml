@@ -1,8 +1,8 @@
 - hosts: localhost
   connection: local
   roles:
-    # - homebrew
-    # - anyenv
-    # - powerline
-    # - zsh
+    - homebrew
+    - anyenv
+    - powerline
+    - zsh
     - dotfiles
