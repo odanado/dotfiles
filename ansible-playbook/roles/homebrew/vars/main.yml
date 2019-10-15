@@ -1,7 +1,6 @@
 brew_taps:
   - homebrew/core
 brew_packages:
-  - anyenv
   - ghq
   - gibo
   - go

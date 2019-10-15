@@ -2,9 +2,9 @@
   connection: local
   roles:
     - homebrew
-    # - homebrew_cask
+    - homebrew_cask
     - anyenv
-    # - powerline
-    # - zsh
-    # - dotfiles
-    # - vscode
+    - powerline
+    - zsh
+    - dotfiles
+    - vscode
