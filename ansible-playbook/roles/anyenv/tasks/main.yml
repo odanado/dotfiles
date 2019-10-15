@@ -1,11 +1,31 @@
-- name: Stat anyenv config
+- name: Stat anyenv
+  stat:
+    path: "{{ anyenv.install_dir }}"
+  register: anyenv_dir
+
+- name: Clone
+  git:
+    repo: "{{ anyenv.git_url }}"
+    dest: "{{ anyenv.install_dir }}"
+  when: not anyenv_dir.stat.exists
+
+- name: Stat anyenv-install
   stat:
     path: ~/.config/anyenv/anyenv-install
-  register: anyenv_config
+  register: anyenv_install
 
-- name: Init anyenv
+- name: Init
   shell: yes | anyenv install --init
-  when: not anyenv_config.stat.exists
+  environment:
+    PATH: "{{ anyenv.install_dir | regex_replace('^~(.*)$', lookup('env', 'HOME') + '\\1') }}/bin:{{ lookup('env', 'PATH') }}"
+  when: not anyenv_install.stat.exists
 
-- name: Import nodenv
-  import_tasks: nodenv.yml
+- name: Install environment
+  shell: "anyenv install {{ item }}"
+  args:
+    creates: "{{ anyenv.install_dir }}/envs/{{ item }}"
+  environment:
+    PATH: "{{ anyenv.install_dir | regex_replace('^~(.*)$', lookup('env', 'HOME') + '\\1') }}/bin:{{ lookup('env', 'PATH') }}"
+  with_items:
+    - goenv
+    - nodenv

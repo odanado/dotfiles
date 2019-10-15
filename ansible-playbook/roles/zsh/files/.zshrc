@@ -1,6 +1,6 @@
 test -t 0 || exit
 
-source /usr/local/opt/zplug/init.zsh
+source $ZPLUG_HOME/init.zsh
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"

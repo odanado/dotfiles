@@ -1,0 +1,5 @@
+- name: Install packages
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages: "{{ apt_packages }}"

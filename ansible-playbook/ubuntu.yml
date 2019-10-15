@@ -1,0 +1,9 @@
+- hosts: localhost
+  connection: local
+  roles:
+    - apt
+    - anyenv
+    - powerline
+    - zsh
+    - dotfiles
+

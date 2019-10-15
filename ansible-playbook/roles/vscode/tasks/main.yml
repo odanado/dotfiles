@@ -1,3 +1,10 @@
+- name: Get list extensions
+  shell: code --list-extensions
+  register: extensions
+  failed_when: no
+  changed_when: extensions.rc != 0
+
 - name: Install extensions
   shell: "code --install-extension {{ item }}"
   with_items: "{{ vscode_extensions }}"
+  when: item | lower not in extensions.stdout_lines | lower

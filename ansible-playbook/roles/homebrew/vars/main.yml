@@ -4,6 +4,7 @@ brew_packages:
   - anyenv
   - ghq
   - gibo
+  - go
   - jq
   - peco
   - rust
