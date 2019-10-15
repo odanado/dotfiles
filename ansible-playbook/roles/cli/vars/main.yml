@@ -1,0 +1,4 @@
+cli:
+  golang:
+    - github.com/motemen/ghq
+    - github.com/peco/peco

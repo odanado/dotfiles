@@ -23,16 +23,11 @@ bindkey '' forward-word
 
 bindkey '' autosuggest-accept
 
-export HISTFILE=${HOME}/.zsh_history
-export HISTSIZE=1000
-export SAVEHIST=500000
 setopt hist_ignore_all_dups # 同じコマンドをヒストリに保存しない
 setopt hist_reduce_blanks # 無駄なスペースを消してヒストリに保存する
 setopt share_history # ヒストリを共有
 
-
 source $ZDOTDIR/.zshrc.anyframe
-
 
 # anyenv
 eval "$(anyenv init - zsh)"

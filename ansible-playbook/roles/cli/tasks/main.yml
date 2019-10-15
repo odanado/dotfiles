@@ -1,0 +1,7 @@
+# XXX: WIP
+
+- name: Install cli tools of golang
+  shell: "eval \"$(anyenv init - zsh)\" && go get {{ item }}"
+  args:
+    executable: zsh
+  with_items: "{{ cli.golang }}"

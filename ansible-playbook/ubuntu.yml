@@ -2,8 +2,8 @@
   connection: local
   roles:
     - apt
+    - zsh
     - anyenv
     - powerline
-    - zsh
     - dotfiles
 
