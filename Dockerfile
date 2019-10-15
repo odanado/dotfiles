@@ -1,17 +1,11 @@
 FROM ubuntu
 
-ENV LANG C.UTF-8
 RUN apt update
-RUN apt install -y curl git zsh python-pip python3-pip gawk locales
-RUN apt install -y software-properties-common && \
-    add-apt-repository ppa:neovim-ppa/stable && \
-    apt update && \
-    apt install -y neovim
-RUN locale-gen ja_JP.UTF-8
+RUN apt install -y --no-install-recommends software-properties-common && \
+    apt-add-repository --yes --update ppa:ansible/ansible && \
+    apt -y --no-install-recommends install ansible python-apt locales
 
-WORKDIR /root
-RUN mkdir /root/dotfiles
-ADD . dotfiles
+ENV LANG ja_JP.UTF-8
+RUN locale-gen $LANG
 
-WORKDIR /root/dotfiles
-CMD tail -f /dev/null
+WORKDIR /work

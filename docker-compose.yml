@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  ansible:
+    build: .
+    volumes:
+      - .:/work
