@@ -2,6 +2,15 @@
 
 set -eu
 
-ansible-playbook --verbose -i ansible-playbook/local ansible-playbook/ubuntu.yml
-# ansible-playbook --verbose -i ansible-playbook/local ansible-playbook/mac.yml
-# zsh -ic "zplug check || zplug install" > /dev/null 2>&1
+os=$(uname -s | tr '[A-Z]' '[a-z]')
+
+case $os in
+    darwin)
+        ansible-playbook --verbose -i ansible-playbook/local ansible-playbook/mac.yml
+    ;;
+    linux)
+        ansible-playbook --verbose -i ansible-playbook/local ansible-playbook/ubuntu.yml
+    ;;
+esac
+
+zsh -ic "zplug check || zplug install" > /dev/null 2>&1
