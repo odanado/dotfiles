@@ -13,4 +13,4 @@ case $os in
     ;;
 esac
 
-zsh -c "zplug check || zplug install"
+zsh -ic "zplug check || zplug install"
