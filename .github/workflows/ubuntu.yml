@@ -15,7 +15,9 @@ jobs:
       run: docker-compose up -d
 
     - name: Run setup.sh
-      run: docker-compose exec -T ansible ./setup.sh
+      run: docker-compose exec -e CI=CI ansible ./setup.sh
+    - name: Rerun setup.sh
+      run: docker-compose exec -e CI=CI ansible ./setup.sh
 
     - name: Rmoev container
       run: docker-compose down -v

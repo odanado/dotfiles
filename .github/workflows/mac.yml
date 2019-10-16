@@ -20,7 +20,9 @@ jobs:
     
     - name: Run setup
       run: ./setup.sh
-    - name: Debug
-      run: zsh -ic "zplug check || zplug install"
+      env:
+        CI: CI
     - name: Rerun setup
       run: ./setup.sh
+      env:
+        CI: CI

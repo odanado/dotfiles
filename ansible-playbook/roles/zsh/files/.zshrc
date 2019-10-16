@@ -1,4 +1,4 @@
-# test -t 0 || exit
+test -t 0 || test ! -z $CI || exit
 
 source $ZPLUG_HOME/init.zsh
 
