@@ -16,8 +16,12 @@ jobs:
 
     - name: Run setup.sh
       run: docker-compose exec -e CI=CI ansible ./setup.sh
+      env:
+        TERM: xterm
     - name: Rerun setup.sh
       run: docker-compose exec -e CI=CI ansible ./setup.sh
+      env:
+        TERM: xterm
 
     - name: Rmoev container
       run: docker-compose down -v
