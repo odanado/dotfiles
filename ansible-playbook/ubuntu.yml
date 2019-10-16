@@ -2,6 +2,7 @@
   connection: local
   roles:
     - apt
+    - cli
     - zsh
     - anyenv
     - powerline

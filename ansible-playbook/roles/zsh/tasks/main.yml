@@ -4,6 +4,11 @@
     dest: ~/.zshenv
     state: link
 
+- name: Make config directory
+  file:
+    path: ~/.config
+    state: directory
+
 - name: Link config files
   file:
     src: "{{ role_path }}/files"

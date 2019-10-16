@@ -1,0 +1,22 @@
+name: Ubuntu CI
+
+on: [push]
+
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build the Docker image
+      run: docker-compose build
+    - name: Start container
+      run: docker-compose up
+
+    - name: Run setup.sh
+      run: docker-compose exec ansible ./setup.sh
+
+    - name: Rmoev container
+      run: docker-compose down -v

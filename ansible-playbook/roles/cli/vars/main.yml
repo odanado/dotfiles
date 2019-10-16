@@ -1,4 +1,7 @@
 cli:
+  install_dir: ~/.local/bin
   golang:
-    - github.com/motemen/ghq
-    - github.com/peco/peco
+    - user: motemen
+      repo: ghq
+    - user: peco
+      repo: peco

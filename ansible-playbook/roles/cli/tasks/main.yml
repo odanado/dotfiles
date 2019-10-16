@@ -1,7 +1,10 @@
-# XXX: WIP
+- name: Make local bin directory
+  file:
+    path: "{{ cli.install_dir }}"
+    state: directory
 
-- name: Install cli tools of golang
-  shell: "eval \"$(anyenv init - zsh)\" && go get {{ item }}"
+- name: Install
+  shell: "{{ role_path }}/files/installer.sh {{ item.user }} {{ item.repo }} {{ cli.install_dir }}"
   args:
-    executable: zsh
+    creates: "{{ cli.install_dir }}/{{ item.repo }}"
   with_items: "{{ cli.golang }}"
