@@ -3,8 +3,7 @@ name: Ubuntu CI
 on: [push]
 
 jobs:
-
-  build:
+  ansible:
  
     runs-on: ubuntu-latest
  
@@ -13,7 +12,7 @@ jobs:
     - name: Build the Docker image
       run: docker-compose build
     - name: Start container
-      run: docker-compose up
+      run: docker-compose up -d
 
     - name: Run setup.sh
       run: docker-compose exec ansible ./setup.sh
