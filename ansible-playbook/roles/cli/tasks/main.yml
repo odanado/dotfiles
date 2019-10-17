@@ -1,6 +1,6 @@
 - name: Include vars for MacOS
   include_vars: mac.yml
-  when: ansible_facts['os_family'] == "MacOSX"
+  when: ansible_facts['os_family'] == "Darwin"
 - name: Include vars for Ubuntu
   include_vars: ubuntu.yml
   when: ansible_facts['os_family'] == "Debian"
