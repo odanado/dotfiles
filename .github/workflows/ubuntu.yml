@@ -14,13 +14,10 @@ jobs:
     - name: Start container
       run: docker run --name ansible -v $PWD:/work -d ansible tail -f /dev/null
 
-    - name: Run setup for ansilbe
-      run: docker exec -t ansible ./scripts/setup/ansible.sh
-    - name: Rerun setup for ansilbe
-      run: docker exec -t ansible ./scripts/setup/ansible.sh
-
-    - name: Run setup for zplug
-      run: docker exec -t ansible ./scripts/setup/zplug.sh
+    - name: Run setup
+      run: docker exec -t ansible ./setup.sh
+    - name: Rerun setup
+      run: docker exec -t ansible ./setup.sh
 
     - name: Rmoev container
       run: docker rm -f ansible
