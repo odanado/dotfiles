@@ -1,3 +1,11 @@
+- name: Import vars
+  import_vars: mac.yml
+  when: ansible_facts['os_family'] == "MacOSX"
+- name: Import vars
+  import_vars: ubuntu.yml
+  when: ansible_facts['os_family'] == "Debian"
+  
+
 - name: Make local bin directory
   file:
     path: "{{ cli.install_dir }}"
