@@ -14,14 +14,13 @@ jobs:
     - name: Start container
       run: docker-compose up -d
 
-    - name: Run setup.sh
-      run: docker-compose exec -e CI=CI ansible ./setup.sh
-      env:
-        TERM: xterm
-    - name: Rerun setup.sh
-      run: docker-compose exec -e CI=CI ansible ./setup.sh
-      env:
-        TERM: xterm
+    - name: Run setup for ansilbe
+      run: docker-compose exec -T -e CI=CI ansible ./scripts/setup/ansible.sh
+    - name: Rerun setup for ansilbe
+      run: docker-compose exec -T -e CI=CI ansible ./scripts/setup/ansible.sh
+
+    - name: Run setup for zplug
+      run: docker-compose exec -e CI=CI ansible ./scripts/setup/zplug.sh
 
     - name: Rmoev container
       run: docker-compose down -v
