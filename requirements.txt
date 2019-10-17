@@ -1,4 +1,0 @@
-powerline-status
-flake8
-autopep8
-neovim
