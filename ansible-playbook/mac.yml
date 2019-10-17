@@ -1,0 +1,11 @@
+- hosts: localhost
+  connection: local
+  roles:
+    - homebrew
+    - homebrew_cask
+    - cli
+    - zsh
+    - anyenv
+    - powerline
+    - dotfiles
+    - vscode

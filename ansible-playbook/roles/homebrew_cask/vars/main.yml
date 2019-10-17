@@ -1,0 +1,8 @@
+brew_cask_apps:
+  - docker
+  - google-chrome
+  - google-japanese-ime
+  - visual-studio-code
+  - iterm2
+  - slack
+  - discord

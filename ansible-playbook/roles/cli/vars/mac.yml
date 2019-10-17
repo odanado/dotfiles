@@ -1,0 +1,3 @@
+cli:
+  install_dir: ~/.local/bin
+  golang: []

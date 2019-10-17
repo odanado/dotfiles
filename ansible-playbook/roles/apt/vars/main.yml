@@ -1,0 +1,8 @@
+apt_packages:
+  - git
+  - jq
+  - python3
+  - python3-pip
+  - unzip
+  - wget
+  - zsh

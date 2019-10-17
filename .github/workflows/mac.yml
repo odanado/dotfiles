@@ -1,0 +1,28 @@
+name: macos-ci
+
+on: [push]
+
+jobs:
+  ansible:
+
+    runs-on: macOS-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Remove .gitconfig
+      run: rm ~/.gitconfig
+
+    - name: Install Homebrew
+      run: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+    - name: Install Ansible
+      run: brew install ansible
+    
+    - name: Run setup
+      run: ./setup.sh
+      env:
+        CI: CI
+    - name: Rerun setup
+      run: ./setup.sh
+      env:
+        CI: CI

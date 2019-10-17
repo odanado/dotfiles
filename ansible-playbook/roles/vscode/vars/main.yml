@@ -1,0 +1,12 @@
+vscode_extensions:
+  - eamodio.gitlens
+  - editorconfig.editorconfig
+  - dbaeumer.vscode-eslint
+  - octref.vetur
+  - mauve.terraform
+  - vscoss.vscode-ansible
+  - vscode-icons-team.vscode-icons
+  - ms-azuretools.vscode-docker
+  - ms-ceintl.vscode-language-pack-ja
+  - ms-vscode-remote.remote-containers
+  - ms-vsliveshare.vsliveshare

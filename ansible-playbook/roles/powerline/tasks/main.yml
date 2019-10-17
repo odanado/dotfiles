@@ -1,0 +1,11 @@
+- name: Install powerline-status for MacOS
+  pip:
+    name: powerline-status
+    # XXX: FIXME
+    executable: pip3
+
+- name: Link config files
+  file:
+    src: "{{ role_path }}/files"
+    dest: "{{ config_dir }}"
+    state: link
