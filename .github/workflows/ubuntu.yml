@@ -10,17 +10,17 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker-compose build
+      run: docker build . -t ansible
     - name: Start container
-      run: docker-compose up -d
+      run: docker run --name ansible -v $PWD:/work -d ansible tail -f /dev/null
 
     - name: Run setup for ansilbe
-      run: docker-compose exec -T -e CI=CI ansible ./scripts/setup/ansible.sh
+      run: docker exec -t ansible ./scripts/setup/ansible.sh
     - name: Rerun setup for ansilbe
-      run: docker-compose exec -T -e CI=CI ansible ./scripts/setup/ansible.sh
+      run: docker exec -t ansible ./scripts/setup/ansible.sh
 
     - name: Run setup for zplug
-      run: docker-compose exec -T -e CI=CI ansible ./scripts/setup/zplug.sh
+      run: docker exec -t ansible ./scripts/setup/zplug.sh
 
     - name: Rmoev container
-      run: docker-compose down -v
+      run: docker rm -f ansible

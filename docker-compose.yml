@@ -6,3 +6,4 @@ services:
     command: ["tail", "-f", "/dev/null"]
     volumes:
       - .:/work
+    tty: true
