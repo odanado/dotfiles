@@ -20,7 +20,7 @@ jobs:
       run: docker-compose exec -T -e CI=CI ansible ./scripts/setup/ansible.sh
 
     - name: Run setup for zplug
-      run: docker-compose exec -e CI=CI ansible ./scripts/setup/zplug.sh
+      run: docker-compose exec -T -e CI=CI ansible ./scripts/setup/zplug.sh
 
     - name: Rmoev container
       run: docker-compose down -v
