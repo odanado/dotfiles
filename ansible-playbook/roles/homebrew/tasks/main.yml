@@ -1,7 +1,3 @@
-- name: Debug
-  debug:
-    msg: "{{ ansible_facts.distribution }}"
-
 # https://docs.ansible.com/ansible/2.7/modules/homebrew_tap_module.html
 - name: Homebrew tap
   homebrew_tap:

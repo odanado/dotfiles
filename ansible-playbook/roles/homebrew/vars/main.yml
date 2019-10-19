@@ -7,6 +7,7 @@ brew_packages:
   - jq
   - peco
   - rust
+  - tree
   - wget
   - yarn
   - zsh
