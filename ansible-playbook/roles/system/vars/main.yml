@@ -1,0 +1,16 @@
+screen_capture_dir: "{{ lookup('env','HOME') + '/Pictures/screencaptures' }}"
+
+osx_defaults:
+  # バッテリーの割合を表示
+  - { domain: com.apple.menuextra.battery, key: ShowPercent, type: string, value: "YES", state: present }
+  # dock を自動的に隠す
+  - { domain: com.apple.dock, key: autohide, type: bool, value: true, state: present }
+  # キャプチャの保存先を変更
+  - { domain: com.apple.screencapture, key: location, type: string, value: "{{ screen_capture_dir }}", state: present }
+  # キャプチャの prefix を "" に変更
+  - { domain: com.apple.screencapture, key: name, type: string, value: "", state: present }
+
+killall:
+  - { name: Dock }
+  - { name: Finder }
+  - { name: SystemUIServer }
