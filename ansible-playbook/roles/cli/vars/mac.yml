@@ -3,3 +3,4 @@ cli:
   golang: []
   rust:
     - centoria
+    - bat
