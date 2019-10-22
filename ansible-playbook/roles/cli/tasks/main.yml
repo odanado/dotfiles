@@ -1,6 +1,7 @@
 - name: Include vars for MacOS
   include_vars: mac.yml
   when: ansible_facts['os_family'] == "Darwin"
+
 - name: Include vars for Ubuntu
   include_vars: ubuntu.yml
   when: ansible_facts['os_family'] == "Debian"
@@ -16,3 +17,6 @@
   args:
     creates: "{{ cli.install_dir }}/{{ item.repo }}"
   with_items: "{{ cli.golang }}"
+
+- name: Import cargo
+  import_tasks: cargo.yml

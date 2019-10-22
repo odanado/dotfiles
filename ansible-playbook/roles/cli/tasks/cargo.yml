@@ -1,0 +1,10 @@
+- name: Get installed packages
+  shell: cargo install --list
+  register: packages
+  failed_when: no
+  changed_when: packages.rc != 0
+
+- name: Install cli tools from cargo
+  shell: "cargo install {{ item }}"
+  with_items: "{{ cli.rust }}"
+  when: not packages.stdout | regex_search('^' + item, multiline=True)
