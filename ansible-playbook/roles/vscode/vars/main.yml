@@ -3,6 +3,7 @@ vscode_extensions:
   - editorconfig.editorconfig
   - dbaeumer.vscode-eslint
   - octref.vetur
+  - prisma.vscode-graphql
   - mauve.terraform
   - vscoss.vscode-ansible
   - vscode-icons-team.vscode-icons
