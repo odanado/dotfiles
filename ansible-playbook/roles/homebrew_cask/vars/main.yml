@@ -1,5 +1,6 @@
 brew_cask_apps:
   - docker
+  - ganache
   - google-chrome
   - google-japanese-ime
   - visual-studio-code
