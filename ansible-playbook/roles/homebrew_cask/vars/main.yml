@@ -8,3 +8,4 @@ brew_cask_apps:
   - iterm2
   - slack
   - discord
+  - kindle
