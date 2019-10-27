@@ -1,12 +1,12 @@
 - hosts: localhost
   connection: local
   roles:
-    - system
-    - homebrew
-    - homebrew_cask
+    #- system
+    #- homebrew
+    #- homebrew_cask
     - cli
-    - zsh
-    - anyenv
-    - powerline
-    - dotfiles
-    - vscode
+    #- zsh
+    #- anyenv
+    #- powerline
+    #- dotfiles
+    #- vscode

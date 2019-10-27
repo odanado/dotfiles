@@ -1,3 +1,6 @@
 cli:
   install_dir: ~/.local/bin
   golang: []
+  rust:
+    - centoria
+    - bat

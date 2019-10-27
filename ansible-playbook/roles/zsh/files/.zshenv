@@ -7,6 +7,9 @@ export SAVEHIST=500000
 
 export PATH=$HOME/.anyenv/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 
 export ZDOTDIR=$HOME/.config/zsh
 export ZPLUG_HOME=$HOME/.zplug
+
+export CENTORIA_CONFIG_PATH=$HOME/.config/centoria
