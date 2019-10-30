@@ -3,6 +3,7 @@ brew_cask_apps:
   - ganache
   - google-chrome
   - google-japanese-ime
+  - postman
   - visual-studio-code
   - iterm2
   - slack
