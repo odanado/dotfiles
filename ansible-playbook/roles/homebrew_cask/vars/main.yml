@@ -8,3 +8,4 @@ brew_cask_apps:
   - slack
   - discord
   - kindle
+  - stoplight-studio
