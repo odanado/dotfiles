@@ -7,6 +7,7 @@ vscode_extensions:
   - mauve.terraform
   - vscoss.vscode-ansible
   - vscode-icons-team.vscode-icons
+  - vscode-styled-components
   - ms-azuretools.vscode-docker
   - ms-ceintl.vscode-language-pack-ja
   - ms-vscode-remote.remote-containers
