@@ -16,7 +16,7 @@ jobs:
       run: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
     - name: Install Ansible
-      run: brew install ansible
+      run: brew install ansible coreutils
     
     - name: Run setup
       run: timeout 10m ./setup.sh
