@@ -12,3 +12,5 @@ vscode_extensions:
   - ms-ceintl.vscode-language-pack-ja
   - ms-vscode-remote.remote-containers
   - ms-vsliveshare.vsliveshare
+  - juanblanco.solidity
+  - william-voyek.vscode-nginx
