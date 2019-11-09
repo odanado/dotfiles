@@ -11,3 +11,4 @@ brew_packages:
   - wget
   - yarn
   - zsh
+  - coreutils
