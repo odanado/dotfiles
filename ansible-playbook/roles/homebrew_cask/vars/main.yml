@@ -10,3 +10,4 @@ brew_cask_apps:
   - discord
   - kindle
   - stoplight-studio
+  - sequel-pro
