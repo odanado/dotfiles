@@ -11,3 +11,4 @@ brew_cask_apps:
   - kindle
   - stoplight-studio
   - sequel-pro
+  - google-cloud-sdk

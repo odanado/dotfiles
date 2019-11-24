@@ -32,6 +32,8 @@ source $ZDOTDIR/.zshrc.anyframe
 # anyenv
 eval "$(anyenv init - zsh)"
 
+source $ZDOTDIR/.gcloud-completion.zsh
+
 # tmuxでもssh-agentが継続されるように
 agent="$HOME/.ssh/agent"
 if [ -S "$SSH_AUTH_SOCK" ]; then
