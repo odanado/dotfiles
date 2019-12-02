@@ -15,3 +15,5 @@ vscode_extensions:
   - juanblanco.solidity
   - william-voyek.vscode-nginx
   - ms-vscode.csharp
+  - ms-python.python
+  - ms-vscode.cpptools
