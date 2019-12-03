@@ -1,5 +1,6 @@
 brew_taps:
   - homebrew/core
+  - buildpack/tap
 brew_packages:
   - ghq
   - gibo
@@ -12,3 +13,4 @@ brew_packages:
   - yarn
   - zsh
   - coreutils
+  - pack
