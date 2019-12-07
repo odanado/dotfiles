@@ -26,6 +26,4 @@
     creates: "{{ anyenv.install_dir }}/envs/{{ item }}"
   environment:
     PATH: "{{ anyenv.install_dir | regex_replace('^~(.*)$', lookup('env', 'HOME') + '\\1') }}/bin:{{ lookup('env', 'PATH') }}"
-  with_items:
-    - goenv
-    - nodenv
+  with_items: "{{ anyenv.envs }}"

@@ -1,3 +1,6 @@
 anyenv:
   git_url: https://github.com/anyenv/anyenv
   install_dir: ~/.anyenv
+  envs:
+    - goenv
+    - nodenv
