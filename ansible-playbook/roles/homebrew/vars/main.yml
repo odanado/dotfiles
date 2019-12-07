@@ -14,3 +14,4 @@ brew_packages:
   - zsh
   - coreutils
   - pack
+  - openjdk

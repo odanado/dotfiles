@@ -12,3 +12,4 @@ brew_cask_apps:
   - stoplight-studio
   - sequel-pro
   - google-cloud-sdk
+  - java
