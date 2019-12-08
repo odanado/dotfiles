@@ -5,3 +5,4 @@ cli:
       repo: ghq
     - user: peco
       repo: peco
+  pip: []

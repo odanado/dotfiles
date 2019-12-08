@@ -11,8 +11,14 @@
     path: "{{ cli.install_dir }}"
     state: directory
 
-- name: Install
+- name: Install for golang
   shell: "{{ role_path }}/files/installer.sh {{ item.user }} {{ item.repo }} {{ cli.install_dir }}"
   args:
     creates: "{{ cli.install_dir }}/{{ item.repo }}"
   with_items: "{{ cli.golang }}"
+
+- name: Install for pip
+  pip:
+    name: "{{ item }}"
+    executable: pip3
+  with_items: "{{ cli.pip }}"
