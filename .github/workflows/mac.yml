@@ -19,10 +19,10 @@ jobs:
       run: brew install ansible coreutils
     
     - name: Run setup
-      run: timeout 60m ./setup.sh
+      run: timeout 15m ./setup.sh
       env:
         CI: CI
     - name: Rerun setup
-      run: timeout 60m ./setup.sh
+      run: timeout 15m ./setup.sh
       env:
         CI: CI
