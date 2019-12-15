@@ -4,3 +4,4 @@ anyenv:
   envs:
     - goenv
     - nodenv
+    - plenv
