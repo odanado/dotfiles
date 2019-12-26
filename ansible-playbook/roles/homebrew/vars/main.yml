@@ -16,3 +16,6 @@ brew_packages:
   - pack
   - openjdk
   - tfenv
+  - automake
+  - autoconf
+  - libtool
