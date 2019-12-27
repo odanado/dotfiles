@@ -20,6 +20,14 @@
     PATH: "{{ anyenv.install_dir | regex_replace('^~(.*)$', lookup('env', 'HOME') + '\\1') }}/bin:{{ lookup('env', 'PATH') }}"
   when: not anyenv_install.stat.exists
 
+- name: Install plugins
+  git: 
+    repo: "{{ item }}"
+    dest: "{{ anyenv.install_dir }}/plugins/{{ item | basename }}"
+  environment:
+    PATH: "{{ anyenv.install_dir | regex_replace('^~(.*)$', lookup('env', 'HOME') + '\\1') }}/bin:{{ lookup('env', 'PATH') }}"
+  with_items: "{{ anyenv.plugins }}"
+
 - name: Install environment
   shell: "anyenv install {{ item }}"
   args:

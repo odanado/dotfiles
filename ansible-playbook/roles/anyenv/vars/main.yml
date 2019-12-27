@@ -5,3 +5,6 @@ anyenv:
     - goenv
     - nodenv
     - plenv
+
+  plugins:
+    - https://github.com/znz/anyenv-update
