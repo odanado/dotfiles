@@ -19,3 +19,8 @@ vscode_extensions:
   - ms-vscode.cpptools
   - toba.vsfire
   - d9705996.perl-toolbox
+  - toba.vsfire
+  - wayou.vscode-todo-highlight
+  - stylelint.vscode-stylelint
+  - dzhavat.css-flexbox-cheatsheet
+  - VisualStudioExptTeam.vscodeintellicode
