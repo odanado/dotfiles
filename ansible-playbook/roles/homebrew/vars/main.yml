@@ -16,3 +16,4 @@ brew_packages:
   - pack
   - openjdk
   - tfenv
+  - terraform-docs
