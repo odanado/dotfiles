@@ -24,3 +24,4 @@ vscode_extensions:
   - stylelint.vscode-stylelint
   - dzhavat.css-flexbox-cheatsheet
   - VisualStudioExptTeam.vscodeintellicode
+  - exiasr.hadolint
