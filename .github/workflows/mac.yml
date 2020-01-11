@@ -18,6 +18,9 @@ jobs:
     - name: Install Ansible
       run: brew install ansible coreutils
     
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v1
+    
     - name: Run setup
       run: timeout 15m ./setup.sh
       env:
