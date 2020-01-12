@@ -1,14 +1,22 @@
 #!/bin/bash
 
-set -eu
+set -e
 
 os=$(uname -s | tr '[A-Z]' '[a-z]')
 
 case $os in
     darwin)
-        ansible-playbook --verbose -i ansible-playbook/local ansible-playbook/mac.yml
+        if [ -z "$GITHUB_WORKFLOW" ] && [ "${GITHUB_WORKFLOW:-A}" = "${GITHUB_WORKFLOW-A}" ]; then
+            PLAYBOOK=ansible-playbook/mac.yml
+        else
+            PLAYBOOK=ansible-playbook/mac-ci.yml
+        fi
     ;;
     linux)
-        ansible-playbook --verbose -i ansible-playbook/local ansible-playbook/ubuntu.yml
+        PLAYBOOK=ansible-playbook/ubuntu.yml
     ;;
 esac
+
+
+echo "run playbook: $PLAYBOOK"
+ansible-playbook --verbose -i ansible-playbook/local $PLAYBOOK
