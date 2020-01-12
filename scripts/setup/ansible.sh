@@ -17,4 +17,5 @@ case $os in
     ;;
 esac
 
+echo "run playbook: $PLAYBOOK"
 ansible-playbook --verbose -i ansible-playbook/local $PLAYBOOK
