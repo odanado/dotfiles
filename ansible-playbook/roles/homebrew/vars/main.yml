@@ -20,3 +20,4 @@ brew_packages:
   - automake
   - autoconf
   - libtool
+  - hadolint
