@@ -13,3 +13,4 @@ brew_cask_apps:
   - sequel-pro
   - google-cloud-sdk
   - java
+  - realm-studio
