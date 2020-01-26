@@ -1,7 +1,7 @@
 cli:
   install_dir: ~/.local/bin
   golang:
-    - user: motemen
+    - user: x-motemen
       repo: ghq
     - user: peco
       repo: peco
