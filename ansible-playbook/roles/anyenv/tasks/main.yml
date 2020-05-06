@@ -35,3 +35,9 @@
   environment:
     PATH: "{{ anyenv.install_dir | regex_replace('^~(.*)$', lookup('env', 'HOME') + '\\1') }}/bin:{{ lookup('env', 'PATH') }}"
   with_items: "{{ anyenv.envs }}"
+
+- name: Link default-packages
+  file:
+    src: "{{ role_path }}/files/nodenv-default-packages"
+    dest: "{{ anyenv.install_dir }}/envs/nodenv/default-packages"
+    state: link

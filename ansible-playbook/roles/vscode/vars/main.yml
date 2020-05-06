@@ -14,7 +14,6 @@ vscode_extensions:
   - ms-vsliveshare.vsliveshare
   - juanblanco.solidity
   - william-voyek.vscode-nginx
-  - ms-vscode.csharp
   - ms-python.python
   - ms-vscode.cpptools
   - toba.vsfire
