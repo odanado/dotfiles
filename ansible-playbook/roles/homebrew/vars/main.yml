@@ -17,6 +17,7 @@ brew_packages:
   - openjdk
   - tfenv
   - terraform-docs
+  - tflint
   - automake
   - autoconf
   - libtool
