@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:18.04
 
 RUN apt update
 RUN apt install -y --no-install-recommends software-properties-common && \
