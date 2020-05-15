@@ -25,3 +25,4 @@ vscode_extensions:
   - VisualStudioExptTeam.vscodeintellicode
   - exiasr.hadolint
   - ms-vscode.go
+  - axetroy.vscode-deno

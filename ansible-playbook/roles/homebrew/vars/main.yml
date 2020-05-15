@@ -22,3 +22,4 @@ brew_packages:
   - autoconf
   - libtool
   - hadolint
+  - deno
