@@ -8,5 +8,8 @@
 [ghq]
 	root = ~/source
 
+[includeIf "gitdir:~/project/"]
+	path = ~/project/.gitconfig
+
 [core]
     excludesfile = ~/.gitignore
