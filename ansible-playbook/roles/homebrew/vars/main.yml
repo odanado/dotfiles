@@ -2,24 +2,24 @@ brew_taps:
   - homebrew/core
   - buildpack/tap
 brew_packages:
+  - autoconf
+  - automake
+  - coreutils
+  - deno
   - ghq
   - gibo
   - go
+  - hadolint
   - jq
+  - libtool
+  - openjdk
+  - pack
   - peco
   - rust
+  - terraform-docs
+  - tfenv
+  - tflint
   - tree
   - wget
   - yarn
   - zsh
-  - coreutils
-  - pack
-  - openjdk
-  - tfenv
-  - terraform-docs
-  - tflint
-  - automake
-  - autoconf
-  - libtool
-  - hadolint
-  - deno

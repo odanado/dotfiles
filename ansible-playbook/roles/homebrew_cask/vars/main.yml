@@ -1,16 +1,16 @@
 brew_cask_apps:
+  - discord
   - docker
   - ganache
   - google-chrome
-  - google-japanese-ime
-  - postman
-  - visual-studio-code
-  - iterm2
-  - slack
-  - discord
-  - kindle
-  - stoplight-studio
-  - sequel-pro
   - google-cloud-sdk
+  - google-japanese-ime
+  - iterm2
   - java
+  - kindle
+  - postman
   - realm-studio
+  - sequel-pro
+  - slack
+  - stoplight-studio
+  - visual-studio-code
