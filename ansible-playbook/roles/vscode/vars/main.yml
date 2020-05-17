@@ -26,3 +26,5 @@ vscode_extensions:
   - vscoss.vscode-ansible
   - wayou.vscode-todo-highlight
   - william-voyek.vscode-nginx
+  - 42Crunch.vscode-openapi
+  - Arjun.swagger-viewer
