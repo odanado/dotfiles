@@ -28,3 +28,4 @@ vscode_extensions:
   - william-voyek.vscode-nginx
   - 42Crunch.vscode-openapi
   - Arjun.swagger-viewer
+  - tintinweb.solidity-visual-auditor
