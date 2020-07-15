@@ -6,14 +6,14 @@ vscode_extensions:
   - eamodio.gitlens
   - editorconfig.editorconfig
   - exiasr.hadolint
+  - golang.go
+  - hashicorp.terraform
   - juanblanco.solidity
-  - mauve.terraform
   - ms-azuretools.vscode-docker
   - ms-ceintl.vscode-language-pack-ja
   - ms-python.python
   - ms-vscode-remote.remote-containers
   - ms-vscode.cpptools
-  - ms-vscode.go
   - ms-vsliveshare.vsliveshare
   - octref.vetur
   - prisma.vscode-graphql

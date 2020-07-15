@@ -13,4 +13,5 @@ brew_cask_apps:
   - sequel-pro
   - slack
   - stoplight-studio
+  - vagrant
   - visual-studio-code
