@@ -9,6 +9,7 @@ vscode_extensions:
   - golang.go
   - hashicorp.terraform
   - juanblanco.solidity
+  - marcostazi.vs-code-vagrantfile
   - ms-azuretools.vscode-docker
   - ms-ceintl.vscode-language-pack-ja
   - ms-python.python
