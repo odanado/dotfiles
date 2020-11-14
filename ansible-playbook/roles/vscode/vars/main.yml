@@ -17,7 +17,6 @@ vscode_extensions:
   - ms-vscode.cpptools
   - ms-vsliveshare.vsliveshare
   - octref.vetur
-  - prisma.vscode-graphql
   - stylelint.vscode-stylelint
   - toba.vsfire
   - toba.vsfire

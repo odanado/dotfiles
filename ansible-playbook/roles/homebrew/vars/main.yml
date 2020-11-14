@@ -9,6 +9,7 @@ brew_packages:
   - ghq
   - gibo
   - go
+  - graphviz
   - ffmpeg
   - hadolint
   - jq
