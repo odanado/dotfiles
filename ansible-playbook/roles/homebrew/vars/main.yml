@@ -5,6 +5,7 @@ brew_packages:
   - autoconf
   - automake
   - bazel
+  - buildifier
   - coreutils
   - deno
   - ghq
