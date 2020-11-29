@@ -8,6 +8,7 @@ brew_cask_apps:
   - iterm2
   - java
   - kindle
+  - obs
   - postman
   - realm-studio
   - sequel-pro

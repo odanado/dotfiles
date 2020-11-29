@@ -14,6 +14,7 @@ brew_packages:
   - graphviz
   - ffmpeg
   - hadolint
+  - imagemagick
   - jq
   - libtool
   - openjdk
