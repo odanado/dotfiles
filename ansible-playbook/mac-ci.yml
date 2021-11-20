@@ -5,7 +5,6 @@
     - homebrew
     - homebrew_cask
     - cli
-    - zsh
+    - config
     - anyenv
-    - powerline
     - dotfiles
