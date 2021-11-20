@@ -1,8 +1,5 @@
-# XXX: find で検索して register で捕まえるやつがうまくいかなくて仕方なくコピペ
-
-
 - name: List files
-  shell: "ls {{ role_path }}/files"
+  shell: "ls -ap {{ role_path }}/files | grep -v /"
   register: files
   changed_when: false
 

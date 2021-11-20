@@ -8,4 +8,4 @@
     - config
     - anyenv
     - dotfiles
-    - vscode
+    # - vscode
