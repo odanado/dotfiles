@@ -1,19 +1,12 @@
-# XXX: find で検索して register で捕まえるやつがうまくいかなくて仕方なくコピペ
+- name: List files
+  shell: "ls -ap {{ role_path }}/files | grep -v /"
+  register: files
+  changed_when: false
 
-- name: Link .gitconfig
-  file:
-    src: "{{ role_path }}/files/.gitconfig"
-    dest: ~/.gitconfig
-    state: link
 
-- name: Link .gitignore
+- name: Link dotfiles
   file:
-    src: "{{ role_path }}/files/.gitignore"
-    dest: ~/.gitignore
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "~/{{ item }}"
     state: link
-
-- name: Link .tmux.conf
-  file:
-    src: "{{ role_path }}/files/.tmux.conf"
-    dest: ~/.tmux.conf
-    state: link
+  with_items: "{{ files.stdout_lines }}"

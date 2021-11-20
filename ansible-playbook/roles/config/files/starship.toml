@@ -1,0 +1,10 @@
+# https://starship.rs/ja-jp/config/
+
+[git_branch]
+symbol = ""
+
+[gcloud]
+disabled = true
+
+[nodejs]
+symbol = ""

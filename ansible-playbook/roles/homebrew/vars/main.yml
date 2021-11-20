@@ -4,7 +4,7 @@ brew_taps:
 brew_packages:
   - autoconf
   - automake
-  - bazel
+  # - bazel
   - buildifier
   - coreutils
   - deno

@@ -5,7 +5,7 @@ on: [push]
 jobs:
   ansible:
 
-    runs-on: macOS-latest
+    runs-on: macos-latest
     timeout-minutes: 15
     
     steps:
