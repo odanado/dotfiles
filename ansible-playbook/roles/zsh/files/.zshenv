@@ -7,10 +7,7 @@ export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=500000
 
-export PATH=$HOME/.anyenv/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 export ZDOTDIR=$HOME/.config/zsh
 export ZPLUG_HOME=$HOME/.zplug
-
-echo poyo
