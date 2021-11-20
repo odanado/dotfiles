@@ -1,4 +1,7 @@
-# XXX: find で検索して register で捕まえるやつがうまくいかなくて仕方なくコピペ
+- name: Make config directory
+  file:
+    path: ~/.config
+    state: directory
 
 
 - name: List files
@@ -7,9 +10,9 @@
   changed_when: false
 
 
-- name: Link dotfiles
+- name: Link config files
   file:
     src: "{{ role_path }}/files/{{ item }}"
-    dest: "~/{{ item }}"
+    dest: "~/.config/{{ item }}"
     state: link
   with_items: "{{ files.stdout_lines }}"
