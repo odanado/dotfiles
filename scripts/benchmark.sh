@@ -20,6 +20,7 @@ $TIME_COMMAND --format="%e" zsh -i -c exit 2> benchmark-results/zsh-install-time
 
 { for i in $(seq 1 10); do $TIME_COMMAND --format="%e" zsh -i -c exit; done } 2> benchmark-results/zsh-load-time.txt
 
+cat benchmark-results/*
 
 ZSH_LOAD_TIME=$(cat benchmark-results/zsh-load-time.txt | awk '{ total += $1 } END { print total/NR }')
 ZSH_INSTALL_TIME=$(cat benchmark-results/zsh-install-time.txt)
