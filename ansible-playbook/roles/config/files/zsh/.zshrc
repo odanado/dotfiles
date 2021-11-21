@@ -4,7 +4,7 @@ include () {
     [[ -f "$1" ]] && source "$1"
 }
 
-eval "$(sheldon source)"
+eval "$(sheldon --quiet source)"
 
 autoload -U compinit && compinit
 
