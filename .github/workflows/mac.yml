@@ -23,7 +23,9 @@ jobs:
       run: timeout 15m ./setup.sh
       env:
         CI: CI
+    
     - name: Rerun setup
+      if: ${{ false }}
       run: timeout 15m ./setup.sh
       env:
         CI: CI
