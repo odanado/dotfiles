@@ -1,5 +1,9 @@
 test -t 0 || test ! -z $CI || exit
 
+include () {
+    [[ -f "$1" ]] && source "$1"
+}
+
 eval "$(sheldon source)"
 
 autoload -U compinit && compinit
@@ -22,7 +26,7 @@ alias ls="ls -G"
 
 source $ZDOTDIR/.zshrc.anyframe
 
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+include /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
 eval "$(anyenv init - zsh)"
 eval "$(starship init zsh)"

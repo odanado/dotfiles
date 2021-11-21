@@ -18,6 +18,9 @@ jobs:
 
     - name: Install Ansible
       run: brew install ansible coreutils
+
+    - name: Install Starship and sheldon
+      run: brew install starship sheldon
     
     - name: Run setup
       run: timeout 15m ./setup.sh
