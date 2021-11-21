@@ -1,1 +1,4 @@
 gitconfig.local
+
+benchmark-results/*
+!benchmark-results/.gitkeep

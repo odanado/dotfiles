@@ -2,7 +2,6 @@ name: benchmark
 
 on: [push]
 
-
 permissions:
   # deployments permission to deploy GitHub pages website
   deployments: write
