@@ -29,6 +29,9 @@ jobs:
       run: timeout 15m ./setup.sh
       env:
         CI: CI
+
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
     
     - name: Run benchmark
       run: ./scripts/benchmark.sh > result.json
