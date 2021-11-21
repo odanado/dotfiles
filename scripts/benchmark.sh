@@ -16,6 +16,9 @@ case $os in
     ;;
 esac
 
+# 初回はインストールがあるので別で実行しておく
+zsh -i -c exit
+
 { for i in $(seq 1 10); do $TIME_COMMAND --format="%e" zsh -i -c exit; done } 2> result.txt
 
 
