@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637490608194,
+  "lastUpdate": 1637491280712,
   "repoUrl": "https://github.com/odanado/dotfiles",
   "entries": {
     "Benchmark": [
@@ -125,6 +125,40 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh install time",
             "value": 4.29,
+            "unit": "Second"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "odanado@users.noreply.github.com",
+            "name": "odanado",
+            "username": "odanado"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "7956eb9caac8c9449a311cb33ed4fc030ab126a3",
+          "message": "Merge pull request #10 from odanado/add-benchmark\n\nベンチマークを追加",
+          "timestamp": "2021-11-21T19:34:14+09:00",
+          "tree_id": "c49bfe51e3b9043f27c3c1d38f0e82b6e757ef3c",
+          "url": "https://github.com/odanado/dotfiles/commit/7956eb9caac8c9449a311cb33ed4fc030ab126a3"
+        },
+        "date": 1637491280123,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time",
+            "value": 0.262903,
+            "unit": "Second"
+          },
+          {
+            "name": "zsh install time",
+            "value": 4.28,
             "unit": "Second"
           }
         ]
