@@ -46,3 +46,7 @@ jobs:
         output-file-path: result.json
         github-token: ${{ secrets.GITHUB_TOKEN }}
         auto-push: true
+        comment-on-alert: true
+        fail-on-alert: true
+        alert-threshold: '150%'
+        alert-comment-cc-users: '@odanado'
