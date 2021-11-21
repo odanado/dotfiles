@@ -1,13 +1,13 @@
-name: macos-ci
+name: benchmark
+
 
 on: [push]
 
 jobs:
-  ansible:
-
+  benchmark:
     runs-on: macos-latest
     timeout-minutes: 15
-    
+
     steps:
     - uses: actions/checkout@v2
     - name: Remove .gitconfig
@@ -17,18 +17,23 @@ jobs:
       run: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
     - name: Install Ansible
-      run: brew install ansible coreutils
+      run: brew install ansible
 
     - name: Install Starship and sheldon
       run: brew install starship sheldon gnu-time
     
     - name: Run setup
-      run: timeout 15m ./setup.sh
+      run: ./setup.sh
       env:
         CI: CI
     
-    - name: Rerun setup
-      if: ${{ false }}
-      run: timeout 15m ./setup.sh
-      env:
-        CI: CI
+    - name: Run benchmark
+      run: ./scripts/benchmark.sh > result.json
+    
+    - name: Upload benchmark
+      uses: benchmark-action/github-action-benchmark@v1
+      with:
+        tool: customSmallerIsBetter
+        output-file-path: result.json
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        auto-push: true
