@@ -39,5 +39,7 @@ jobs:
     - name: Upload benchmark
       uses: benchmark-action/github-action-benchmark@v1
       with:
-        tool: 'customSmallerIsBetter'
+        tool: customSmallerIsBetter
         output-file-path: result.json
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        auto-push: true
