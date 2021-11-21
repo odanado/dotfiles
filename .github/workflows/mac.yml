@@ -9,7 +9,7 @@ jobs:
     timeout-minutes: 15
     
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Remove .gitconfig
       run: rm ~/.gitconfig
 
@@ -17,13 +17,14 @@ jobs:
       run: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
     - name: Install Ansible
-      run: brew install ansible coreutils
+      run: brew install ansible
     
     - name: Run setup
-      run: timeout 15m ./setup.sh
+      run: ./setup.sh
       env:
         CI: CI
+    
     - name: Rerun setup
-      run: timeout 15m ./setup.sh
+      run: ./setup.sh
       env:
         CI: CI

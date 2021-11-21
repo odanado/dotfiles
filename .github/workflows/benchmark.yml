@@ -1,0 +1,48 @@
+name: benchmark
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  # deployments permission to deploy GitHub pages website
+  deployments: write
+  # contents permission to update benchmark contents in gh-pages branch
+  contents: write
+
+
+jobs:
+  benchmark:
+    runs-on: macos-latest
+    timeout-minutes: 15
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Remove .gitconfig
+      run: rm ~/.gitconfig
+
+    - name: Install Homebrew
+      run: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+    - name: Install Ansible
+      run: brew install ansible
+
+    - name: Install Starship and sheldon
+      run: brew install starship sheldon gnu-time
+    
+    - name: Run setup
+      run: ./setup.sh
+      env:
+        CI: CI
+    
+    - name: Run benchmark
+      run: ./scripts/benchmark.sh > result.json
+    
+    - name: Upload benchmark
+      uses: benchmark-action/github-action-benchmark@v1
+      with:
+        tool: customSmallerIsBetter
+        output-file-path: result.json
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        auto-push: true
