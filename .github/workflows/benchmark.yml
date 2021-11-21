@@ -34,7 +34,7 @@ jobs:
         CI: CI
     
     - name: Run benchmark
-      run: ./scripts/benchmark.sh > result.json
+      run: ./scripts/benchmark.sh > result.json && cat result.json 
     
     - name: Upload benchmark
       uses: benchmark-action/github-action-benchmark@v1
