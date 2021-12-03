@@ -17,17 +17,12 @@ jobs:
       run: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
     - name: Install Ansible
-      run: brew install ansible
+      run: python -m pip install --user ansible
     
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v3
 
     - name: Run setup
-      run: ./setup.sh
-      env:
-        CI: CI
-    
-    - name: Rerun setup
       run: ./setup.sh
       env:
         CI: CI
