@@ -1,8 +1,0 @@
-cli:
-  install_dir: ~/.local/bin
-  golang:
-    - user: x-motemen
-      repo: ghq
-    - user: peco
-      repo: peco
-  pip: []

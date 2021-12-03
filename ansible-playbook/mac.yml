@@ -3,7 +3,6 @@
   roles:
     - system
     - homebrew
-    # - cli
     - config
     - dotfiles
     # - vscode
