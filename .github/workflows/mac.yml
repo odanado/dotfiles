@@ -16,18 +16,8 @@ jobs:
     - name: Install Homebrew
       run: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-    - uses: actions/cache@v2
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-v1
-        restore-keys: |
-          ${{ runner.os }}-pip-
-
     - name: Install Ansible
-      run: python3 -m pip install ansible
-
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
+      run: brew install ansible
       
     - name: Run setup
       run: ./setup.sh
