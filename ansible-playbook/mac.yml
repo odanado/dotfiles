@@ -2,10 +2,8 @@
   connection: local
   roles:
     - system
-    # - homebrew
-    # - homebrew_cask
+    - homebrew
     # - cli
     - config
-    - anyenv
     - dotfiles
     # - vscode

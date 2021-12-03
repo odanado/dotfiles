@@ -1,16 +1,8 @@
-# https://docs.ansible.com/ansible/2.7/modules/homebrew_tap_module.html
-- name: Homebrew tap
-  homebrew_tap:
-    name: "{{ item }}"
-    state: "present"
-  with_items: "{{ brew_taps }}"
-
 # https://docs.ansible.com/ansible/2.7/modules/homebrew_module.html
 - name: Update Homebrew
   homebrew:
     update_homebrew: yes
 
-- name: Install Homebrew Packages
-  homebrew:
-    name: "{{ brew_packages }}"
-    state: "present"
+- name: Run brew bundle
+  shell: brew bundle --file {{ role_path }}/files/Brewfile
+  changed_when: false
