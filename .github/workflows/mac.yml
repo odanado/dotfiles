@@ -16,6 +16,13 @@ jobs:
     - name: Install Homebrew
       run: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+    - uses: actions/cache@v2
+      with:
+      path: ~/.cache/pip
+      key: ${{ runner.os }}-pip-v1
+      restore-keys: |
+        ${{ runner.os }}-pip-
+
     - name: Install Ansible
       run: python -m pip install --user ansible
     
