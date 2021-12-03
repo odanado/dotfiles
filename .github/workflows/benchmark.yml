@@ -33,7 +33,7 @@ jobs:
           ${{ runner.os }}-pip-
 
     - name: Install Ansible
-      run: python3 -m pip install --user ansible
+      run: python3 -m pip install ansible
 
     - name: Install gnu-time
       run: brew install gnu-time
