@@ -25,6 +25,8 @@ jobs:
 
     - name: Install Ansible
       run: python -m pip install --user ansible
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
 
     - name: Run setup
       run: ./setup.sh
