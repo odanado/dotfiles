@@ -1,7 +1,0 @@
-cli:
-  install_dir: ~/.local/bin
-  golang:
-    - user: google
-      repo: pprof
-  pip:
-    - awscli

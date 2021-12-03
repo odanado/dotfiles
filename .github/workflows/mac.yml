@@ -6,7 +6,7 @@ jobs:
   ansible:
 
     runs-on: macos-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     
     steps:
     - uses: actions/checkout@v2
@@ -18,13 +18,8 @@ jobs:
 
     - name: Install Ansible
       run: brew install ansible
-    
+      
     - name: Run setup
-      run: ./setup.sh
-      env:
-        CI: CI
-    
-    - name: Rerun setup
       run: ./setup.sh
       env:
         CI: CI

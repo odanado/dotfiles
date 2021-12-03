@@ -1,8 +1,0 @@
-# https://docs.ansible.com/ansible/2.7/modules/homebrew_cask_module.html
-- name: Install Homebrew Cask Packages
-  homebrew_cask:
-    name: "{{ item }}"
-    state: "present"
-    install_options: "appdir=/Applications"
-    accept_external_apps: yes
-  with_items: "{{ brew_cask_apps }}"
