@@ -4,6 +4,9 @@ include () {
     [[ -f "$1" ]] && source "$1"
 }
 
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 eval "$(sheldon --quiet source)"
 
 autoload -U compinit && compinit
