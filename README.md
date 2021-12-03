@@ -12,3 +12,5 @@ $ ./setup.sh
 
 ## Benchmark
 See: https://odanado.github.io/dotfiles/dev/bench/
+
+## 思想
