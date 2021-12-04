@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 permissions:
   # deployments permission to deploy GitHub pages website
@@ -38,6 +39,9 @@ jobs:
     
     - name: Run benchmark
       run: ./scripts/benchmark.sh > result.json
+
+    - name: Dump result.json
+      run: cat result.json
     
     - name: Upload benchmark
       uses: benchmark-action/github-action-benchmark@v1
