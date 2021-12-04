@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eu
+set -eux
 
 rm -f benchmark-results/*
 
@@ -15,12 +15,13 @@ case $os in
     ;;
 esac
 
-# 初回はインストールがあるので別で実行しておく
-$TIME_COMMAND --format="%e" zsh -i -c exit 2> benchmark-results/zsh-install-time.txt
+$TIME_COMMAND --format="%e" --output=benchmark-results/zsh-install-time.txt zsh -i -c exit
 
-{ for i in $(seq 1 10); do $TIME_COMMAND --format="%e" zsh -i -c exit; done } 2> benchmark-results/zsh-load-time.txt
+for i in $(seq 1 10); do 
+    $TIME_COMMAND --format="%e" --output=benchmark-results/zsh-load-time-${i}.txt zsh -i -c exit;
+done
 
-ZSH_LOAD_TIME=$(cat benchmark-results/zsh-load-time.txt | awk '{ total += $1 } END { print total/NR }')
+ZSH_LOAD_TIME=$(cat benchmark-results/zsh-load-time-*.txt | awk '{ total += $1 } END { print total/NR }')
 ZSH_INSTALL_TIME=$(cat benchmark-results/zsh-install-time.txt)
 
 cat<<EOJ
