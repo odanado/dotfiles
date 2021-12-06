@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638641035736,
+  "lastUpdate": 1638810822599,
   "repoUrl": "https://github.com/odanado/dotfiles",
   "entries": {
     "Benchmark": [
@@ -295,6 +295,40 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh install time",
             "value": 3.4,
+            "unit": "Second"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "odan3240@gmail.com",
+            "name": "odan",
+            "username": "odanado"
+          },
+          "committer": {
+            "email": "odan3240@gmail.com",
+            "name": "odan",
+            "username": "odanado"
+          },
+          "distinct": true,
+          "id": "81797a9c0d571f13161a35508e7388138e2f6278",
+          "message": "x86_64 のときにそれを表示",
+          "timestamp": "2021-12-07T01:58:12+09:00",
+          "tree_id": "00ebb6f8fb35b8eccee9e852c62adbbed6338db2",
+          "url": "https://github.com/odanado/dotfiles/commit/81797a9c0d571f13161a35508e7388138e2f6278"
+        },
+        "date": 1638810821283,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time",
+            "value": 0.272,
+            "unit": "Second"
+          },
+          {
+            "name": "zsh install time",
+            "value": 4.34,
             "unit": "Second"
           }
         ]
