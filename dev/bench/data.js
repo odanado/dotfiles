@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638810822599,
+  "lastUpdate": 1639999071650,
   "repoUrl": "https://github.com/odanado/dotfiles",
   "entries": {
     "Benchmark": [
@@ -329,6 +329,40 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh install time",
             "value": 4.34,
+            "unit": "Second"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "odan3240@gmail.com",
+            "name": "odan",
+            "username": "odanado"
+          },
+          "committer": {
+            "email": "odan3240@gmail.com",
+            "name": "odan",
+            "username": "odanado"
+          },
+          "distinct": true,
+          "id": "51d79f06f32e88d01de99c76203a73eb9c6c7a8b",
+          "message": "ローカル限定の zshenv を扱えるようにした",
+          "timestamp": "2021-12-20T20:02:52+09:00",
+          "tree_id": "f8267b5469e40966ba9a0c3b033b8c45f81f7866",
+          "url": "https://github.com/odanado/dotfiles/commit/51d79f06f32e88d01de99c76203a73eb9c6c7a8b"
+        },
+        "date": 1639999070840,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time",
+            "value": 0.295,
+            "unit": "Second"
+          },
+          {
+            "name": "zsh install time",
+            "value": 3.28,
             "unit": "Second"
           }
         ]
