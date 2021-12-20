@@ -7,6 +7,8 @@ include () {
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 eval "$(sheldon --quiet source)"
 
 autoload -U compinit && compinit
