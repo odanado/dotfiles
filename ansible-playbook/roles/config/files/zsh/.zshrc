@@ -32,4 +32,6 @@ source $ZDOTDIR/.zshrc.anyframe
 include /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
 eval "$(anyenv init - zsh)"
+eval "$(direnv hook zsh)"
+
 eval "$(starship init zsh)"
