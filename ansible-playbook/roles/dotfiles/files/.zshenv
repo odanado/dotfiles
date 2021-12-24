@@ -1,3 +1,7 @@
+include () {
+    [[ -f "$1" ]] && source "$1"
+}
+
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:=${HOME}/.config}
 export ZDOTDIR=${ZDOTDIR:=${XDG_CONFIG_HOME}/zsh}
 
@@ -10,3 +14,5 @@ export SAVEHIST=500000
 
 export PATH=$HOME/.anyenv/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+
+include $HOME/.local.zshenv
