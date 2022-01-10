@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1640000114637,
+  "lastUpdate": 1641818092461,
   "repoUrl": "https://github.com/odanado/dotfiles",
   "entries": {
     "Benchmark": [
@@ -397,6 +397,40 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh install time",
             "value": 3.17,
+            "unit": "Second"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "odan3240@gmail.com",
+            "name": "odan",
+            "username": "odanado"
+          },
+          "committer": {
+            "email": "odan3240@gmail.com",
+            "name": "odan",
+            "username": "odanado"
+          },
+          "distinct": true,
+          "id": "5a44704b63f0c58f00c22e62ea45a40ca53338b8",
+          "message": "remove awscli",
+          "timestamp": "2022-01-10T21:15:46+09:00",
+          "tree_id": "373afe25c52c1b4c2c84648dbc8183364b8d753e",
+          "url": "https://github.com/odanado/dotfiles/commit/5a44704b63f0c58f00c22e62ea45a40ca53338b8"
+        },
+        "date": 1641818091788,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time",
+            "value": 0.333,
+            "unit": "Second"
+          },
+          {
+            "name": "zsh install time",
+            "value": 3.69,
             "unit": "Second"
           }
         ]
