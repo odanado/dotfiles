@@ -2,14 +2,21 @@
 	name = odan
 	email = odan3240@gmail.com
 
+[core]
+    excludesfile = ~/.gitignore
+
 [alias]
     graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --date-order
 
-[ghq]
-	root = ~/source
+[pull]
+    ff = only
+
+[init]
+	defaultBranch = main
+
 
 [includeIf "gitdir:~/project/"]
 	path = ~/project/.gitconfig
 
-[core]
-    excludesfile = ~/.gitignore
+[ghq]
+	root = ~/source
