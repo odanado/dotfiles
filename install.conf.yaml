@@ -1,0 +1,5 @@
+- link:
+    ~/temp/.config/sheldon: config/sheldon
+
+- create:
+    ~/.config

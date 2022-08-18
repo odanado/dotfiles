@@ -13,13 +13,8 @@ jobs:
     - name: Remove .gitconfig
       run: rm ~/.gitconfig
 
-    - name: Install Homebrew
-      run: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-    - name: Install Ansible
-      run: brew install ansible
+    - name: Install Dotbot
+      run: brew install dotbot
       
     - name: Run setup
-      run: ./setup.sh
-      env:
-        CI: CI
+      run: dotbot -c install.conf.yaml
