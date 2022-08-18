@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1641818092461,
+  "lastUpdate": 1660827304537,
   "repoUrl": "https://github.com/odanado/dotfiles",
   "entries": {
     "Benchmark": [
@@ -431,6 +431,40 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh install time",
             "value": 3.69,
+            "unit": "Second"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "odanado@users.noreply.github.com",
+            "name": "odanado",
+            "username": "odanado"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "da3764a7bb531fdef05638a688b22b31fa9257a0",
+          "message": "Create manual.yml",
+          "timestamp": "2022-08-18T21:41:45+09:00",
+          "tree_id": "7d6ac22b7b16d37289e6cb37af16570391fdf16e",
+          "url": "https://github.com/odanado/dotfiles/commit/da3764a7bb531fdef05638a688b22b31fa9257a0"
+        },
+        "date": 1660827303606,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time",
+            "value": 0.418,
+            "unit": "Second"
+          },
+          {
+            "name": "zsh install time",
+            "value": 4.89,
             "unit": "Second"
           }
         ]
