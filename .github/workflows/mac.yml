@@ -14,7 +14,7 @@ jobs:
       run: rm ~/.gitconfig
 
     - name: Install Homebrew
-      run: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     - name: Install Ansible
       run: brew install ansible
