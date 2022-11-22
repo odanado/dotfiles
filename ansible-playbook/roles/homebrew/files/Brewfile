@@ -1,7 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 brew "ansible"
-brew "anyenv"
+brew "asdf"
 brew "coreutils"
 brew "direnv"
 brew "gh"
