@@ -1,6 +1,5 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
-brew "ansible"
 brew "asdf"
 brew "coreutils"
 brew "direnv"
