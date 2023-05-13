@@ -19,6 +19,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: sudo apt-get install --no-install-recommends -y zsh
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
       - run: ./bootstrap.sh
