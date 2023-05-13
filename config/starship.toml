@@ -1,0 +1,16 @@
+# https://starship.rs/ja-jp/config/
+
+[git_branch]
+symbol = ""
+
+[gcloud]
+disabled = true
+
+[nodejs]
+symbol = ""
+
+[custom.arch]
+command = "uname -m"
+when = """ test $(uname -m) = "x86_64" """
+style = "bold yellow"
+format = "[$output]($style)"
