@@ -8,11 +8,15 @@ on:
     types: [opened, synchronize, reopened]
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   setup:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v3
-      - run: apt-get install --no-install-recommends -y zsh
+      - run: sudo apt-get install --no-install-recommends -y zsh
       - run: ./bootstrap.sh
