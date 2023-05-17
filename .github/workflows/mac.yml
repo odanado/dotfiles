@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  ansible:
+  setup:
 
     runs-on: macos-latest
     timeout-minutes: 30
