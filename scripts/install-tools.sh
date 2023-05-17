@@ -2,5 +2,12 @@
 
 set -eux
 
-test "$(uname)" = "Darwin" && ./scripts/install-tools-macos.sh
-test "$(uname)" = "Linux" && ./scripts/install-tools-ubuntu.sh
+OS="$(uname)"
+
+if [ "$OS" = "Darwin" ]; then
+  ./scripts/install-tools-macos.sh
+fi
+
+if [ "$OS" = "Linux" ]; then
+  ./scripts/install-tools-ubuntu.sh
+fi
