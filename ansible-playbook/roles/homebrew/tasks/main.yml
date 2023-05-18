@@ -1,8 +1,0 @@
-# https://docs.ansible.com/ansible/2.7/modules/homebrew_module.html
-- name: Update Homebrew
-  homebrew:
-    update_homebrew: yes
-
-- name: Run brew bundle
-  shell: brew bundle --file {{ role_path }}/files/Brewfile
-  changed_when: false
