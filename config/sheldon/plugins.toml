@@ -14,6 +14,9 @@ shell = "zsh"
 
 [plugins]
 
+[plugins.local]
+local = "~/.config/zsh/plugins"
+
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 
@@ -43,6 +46,3 @@ use = ["shell-completions/gibo-completion.zsh"]
 [plugins.sheldon]
 github = "rossmacarthur/sheldon"
 
-
-[plugins.local]
-local = "~/.config/zsh/plugins"

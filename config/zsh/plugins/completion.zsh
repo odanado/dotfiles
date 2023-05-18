@@ -3,6 +3,6 @@ include () {
 }
 
 type -p brew >/dev/null && include $(brew --caskroom)/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+type -p aqua >/dev/null && eval "$(aqua completion zsh)"
 
 eval "$(direnv hook zsh)"
-eval "$(aqua completion zsh)"
