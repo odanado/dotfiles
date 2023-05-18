@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1660827304537,
+  "lastUpdate": 1684427331194,
   "repoUrl": "https://github.com/odanado/dotfiles",
   "entries": {
     "Benchmark": [
@@ -465,6 +465,40 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh install time",
             "value": 4.89,
+            "unit": "Second"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "odanado@users.noreply.github.com",
+            "name": "odanado",
+            "username": "odanado"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9effd950c930b074415ee836ede8d19c563be098",
+          "message": "Merge pull request #21 from odanado/remove-ansible\n\nremove ansible",
+          "timestamp": "2023-05-19T01:28:08+09:00",
+          "tree_id": "1cbcd1d580af9cae081eadd3932b7e3963484502",
+          "url": "https://github.com/odanado/dotfiles/commit/9effd950c930b074415ee836ede8d19c563be098"
+        },
+        "date": 1684427330207,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time",
+            "value": 0.489,
+            "unit": "Second"
+          },
+          {
+            "name": "zsh install time",
+            "value": 2.6,
             "unit": "Second"
           }
         ]
