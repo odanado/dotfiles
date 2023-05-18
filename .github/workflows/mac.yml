@@ -14,23 +14,15 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  ansible:
+  setup:
 
     runs-on: macos-latest
     timeout-minutes: 30
     
     steps:
-    - uses: actions/checkout@v2
-    - name: Remove .gitconfig
-      run: rm ~/.gitconfig
+    - uses: actions/checkout@v3
 
     - name: Install Homebrew
       run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-    - name: Install Ansible
-      run: brew install ansible
-      
-    - name: Run setup
-      run: ./setup.sh
-      env:
-        CI: CI
+    - run: ./bootstrap.sh

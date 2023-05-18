@@ -3,7 +3,7 @@ name: benchmark
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 permissions:
@@ -15,27 +15,14 @@ permissions:
 
 jobs:
   benchmark:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 30
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Remove .gitconfig
-      run: rm ~/.gitconfig
-
-    - name: Install Homebrew
-      run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-    - name: Install Ansible
-      run: brew install ansible
-
-    - name: Install gnu-time
-      run: brew install gnu-time
+    - uses: actions/checkout@v3
     
-    - name: Run setup
-      run: ./setup.sh
-      env:
-        CI: CI
+    - run: sudo apt-get install --no-install-recommends -y zsh
+    - run: ./bootstrap.sh
     
     - name: Run benchmark
       run: ./scripts/benchmark.sh > result.json
