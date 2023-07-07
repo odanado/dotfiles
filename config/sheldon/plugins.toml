@@ -46,3 +46,6 @@ use = ["shell-completions/gibo-completion.zsh"]
 [plugins.sheldon]
 github = "rossmacarthur/sheldon"
 
+
+[plugins.ni]
+github = "azu/ni.zsh"
