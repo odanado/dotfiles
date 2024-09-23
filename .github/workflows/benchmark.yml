@@ -22,9 +22,9 @@ jobs:
     - uses: actions/checkout@v4
     
     - run: sudo apt-get install --no-install-recommends -y zsh
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
-    # - run: zsh -c 'compaudit | xargs chmod g-w'
+    # - name: Setup tmate session
+    #   uses: mxschmitt/action-tmate@v3
+    - run: zsh -c "zsh /usr/share/zsh/functions/Completion/compaudit | sudo xargs chmod g-w"
 
     - run: ./bootstrap.sh
     
