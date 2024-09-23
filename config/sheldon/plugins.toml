@@ -39,10 +39,6 @@ github = "zsh-users/zsh-autosuggestions"
 [plugins.anyframe]
 github = "mollifier/anyframe"
 
-[plugins.gibo]
-github = "simonwhitaker/gibo"
-use = ["shell-completions/gibo-completion.zsh"]
-
 [plugins.sheldon]
 github = "rossmacarthur/sheldon"
 
