@@ -19,4 +19,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: sudo apt-get install --no-install-recommends -y zsh
+      - run: compaudit | xargs chmod g-w
       - run: ./bootstrap.sh

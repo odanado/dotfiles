@@ -1,4 +1,3 @@
-compaudit | xargs chmod g-w
 autoload -U compinit && compinit
 
 bindkey -e
