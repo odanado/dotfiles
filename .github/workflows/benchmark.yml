@@ -25,7 +25,8 @@ jobs:
     # - name: Setup tmate session
     #   uses: mxschmitt/action-tmate@v3
     # - run: zsh -c "zsh /usr/share/zsh/functions/Completion/compaudit | sudo xargs chmod g-w"
-    - run: compaudit | sudo xargs chmod g-w
+    # - run: compaudit | sudo xargs chmod g-w
+    - run: compaudit
       shell: zsh {0}
 
     - run: ./bootstrap.sh
