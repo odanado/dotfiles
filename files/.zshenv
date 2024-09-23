@@ -20,3 +20,4 @@ export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME}/asdfrc"
 # for aqua
 export PATH="${XDG_DATA_HOME}/aquaproj-aqua/bin:$PATH"
 export AQUA_CONFIG="${XDG_CONFIG_HOME}/aquaproj-aqua/aqua.yaml"
+. "$HOME/.cargo/env"
