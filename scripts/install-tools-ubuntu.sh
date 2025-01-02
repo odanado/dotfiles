@@ -10,4 +10,4 @@ rm aqua-installer
 
 zsh -c "aqua i"
 
-zsh -c "git clone https://github.com/asdf-vm/asdf.git \$ASDF_DATA_DIR --branch v0.11.3"
+curl https://mise.run | sh

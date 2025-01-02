@@ -1,7 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 
-brew "asdf"
+brew "mise"
 brew "coreutils"
 brew "direnv"
 brew "gh"
