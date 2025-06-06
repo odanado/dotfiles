@@ -1,4 +1,4 @@
-gitconfig.local
+.gitconfig.local
 
 benchmark-results/*
 !benchmark-results/.gitkeep

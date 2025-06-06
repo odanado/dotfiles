@@ -3,6 +3,7 @@
 set -eux
 
 ln -sf $PWD/files/.gitconfig $HOME/.gitconfig
+ln -sf $PWD/files/.gitconfig.local $HOME/.gitconfig.local
 ln -sf $PWD/files/.gitignore $HOME/.gitignore
 ln -sf $PWD/files/.zshenv $HOME/.zshenv
 
