@@ -1,5 +1,3 @@
-tap "homebrew/bundle"
-
 brew "mise"
 brew "coreutils"
 brew "direnv"
