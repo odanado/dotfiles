@@ -3,10 +3,6 @@ include () {
 }
 
 
-if [ "$OS" = "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
   eval "$(/opt/homebrew/bin/mise activate zsh)"
-fi
-
-if [ "$OS" = "Linux" ]; then
-  eval "$(~/.local/bin/mise activate zsh)"
 fi
