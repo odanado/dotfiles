@@ -1,6 +1,7 @@
 [user]
 	name = odan
 	email = odan3240@gmail.com
+	signingkey = /Users/odan/.ssh/id_ed25519.pub
 
 [include]
 	path = ~/.gitconfig.local
@@ -19,7 +20,10 @@
 
 [ghq]
 	root = ~/source
+
 [gpg]
 	format = ssh
+
 [commit]
 	gpgsign = true
+
