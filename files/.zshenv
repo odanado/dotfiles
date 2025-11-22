@@ -16,4 +16,6 @@ export ZDOTDIR=${ZDOTDIR:=${XDG_CONFIG_HOME}/zsh}
 # for aqua
 export PATH="${XDG_DATA_HOME}/aquaproj-aqua/bin:$PATH"
 
-. "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ]; then
+    . "$HOME/.cargo/env"
+fi

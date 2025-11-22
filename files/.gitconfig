@@ -1,7 +1,9 @@
 [user]
 	name = odan
 	email = odan3240@gmail.com
-	signingkey = ~/.ssh/id_ed25519.pub
+
+[include]
+	path = ~/.gitconfig.local
 
 [core]
     excludesfile = ~/.gitignore
@@ -14,10 +16,6 @@
 
 [init]
 	defaultBranch = main
-
-
-[includeIf "gitdir:~/project/"]
-	path = ~/project/.gitconfig
 
 [ghq]
 	root = ~/source
