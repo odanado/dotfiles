@@ -13,9 +13,6 @@ export SAVEHIST=500000
 # for zsh
 export ZDOTDIR=${ZDOTDIR:=${XDG_CONFIG_HOME}/zsh}
 
-# for aqua
-export PATH="${XDG_DATA_HOME}/aquaproj-aqua/bin:$PATH"
-
 if [ -f "$HOME/.cargo/env" ]; then
     . "$HOME/.cargo/env"
 fi
