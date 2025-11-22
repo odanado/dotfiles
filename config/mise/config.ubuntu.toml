@@ -1,0 +1,9 @@
+[tools]
+"github:cli/cli" = "latest"
+"github:peco/peco" = "latest"
+"github:rossmacarthur/sheldon" = "latest"
+"github:starship/starship" = "latest"
+
+[tools."github:direnv/direnv"]
+version = "latest"
+bin = "direnv"
